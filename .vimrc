@@ -37,6 +37,8 @@ set wrapscan
 " Display
 " カラースキーマの設定をdesertにする
 colorscheme desert
+" デフォルトの配色をdarkに設定する
+set background=dark
 " シンタックスカラーリングを設定する
 syntax on
 " 編集中のファイル名を表示する
