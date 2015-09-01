@@ -1,3 +1,26 @@
+" NeoBundle Settings
+if has('vim_starting')
+	set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-surround'
+
+call neobundle#end()
+
+NeoBundleCheck
+
+filetype plugin indent on
+
+
 " Encode
 " 文字コードをUTF-8に設定する
 set encoding=UTF-8
@@ -44,7 +67,7 @@ syntax on
 " 編集中のファイル名を表示する
 set title
 " 行番号を表示する
-set number 
+set number
 " カーソルが何行目の何列目に置かれているかを表示する
 set ruler
 " 入力中のコマンドを表示する
