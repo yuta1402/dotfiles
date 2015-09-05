@@ -1,4 +1,3 @@
-
 alias df='df -h'
 
 case "${OSTYPE}" in
