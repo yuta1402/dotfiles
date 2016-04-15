@@ -1,0 +1,12 @@
+if &compatible
+    set nocompatible
+endif
+
+set runtimepath+=~/.vim/
+
+runtime! rc/dein.vim
+runtime! rc/mappings.vim
+runtime! rc/basic.vim
+runtime! rc/view.vim
+
+filetype plugin indent on
