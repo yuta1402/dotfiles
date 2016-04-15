@@ -1,41 +1,130 @@
-" NeoBundle Settings
-if has('vim_starting')
-	set runtimepath+=~/.vim/bundle/neobundle.vim
+if &compatible
+    set nocompatible
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" dein settings
+" Load dein
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+if &runtimepath !~# '/dein.vim'
+    if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    execute 'set runtimepath^=' . substitute(fnamemodify(s:dein_repo_dir, ':p'), '/$', '', '')
+endif
 
-" My Bundles
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-surround'
+if dein#load_state(s:dein_dir)
+    call dein#begin(s:dein_dir)
 
-call neobundle#end()
+    let s:toml_path      = '~/.vim/rc/dein.toml'
+    let s:toml_lazy_path = '~/.vim/rc/dein_lazy.toml'
 
-NeoBundleCheck
+    call dein#load_toml(s:toml_path,      {'lazy': 0})
+    call dein#load_toml(s:toml_lazy_path, {'lazy': 1})
+
+    call dein#end()
+    call dein#save_state()
+endif
+
 
 filetype plugin indent on
 
+" Installation check
+if has('vim_starting') && dein#check_install()
+    call dein#install()
+endif
 
-" Encode
+
+" TypeScript settings
+augroup TypeScriptSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.ts set filetype=typescript
+augroup END
+
+
+" lightline.vim settings
+" let g:lightline = {
+"     \ 'colorscheme': 'solarized',
+"     \ }
+
+
+" neocomplete settings
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_ignore_case = 1
+
+" if !exists('g:neocomplete#sources#omni#input_patterns')
+"     let g:neocomplete#sources#omni#input_patterns = {}
+" endif
+
+
+" Markdown settings
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
+let g:previm_enable_realtime = 0
+
+if has('mac')
+    let g:previm_open_cmd = 'open -a Firefox'
+endif
+
+
+" Snippet settings
+" Set neosnippet options
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+
+" clang settings
+" Set clang options for vim-clang
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
+let g:clang_check_syntax_auto = 1
+
+let g:clang_c_completeopt = 'longest,menuone'
+let g:clang_cpp_completeopt = 'longest,menuone'
+
+
+" quickrun settings
+" Set quickrun options
+let g:quickrun_config = {
+\    "_" : {
+\        'runner' : 'vimproc',
+\        'runner/vimproc/updatetime' : 60,
+\        'outputter/buffer/split' : ':botright 8sp',
+\        'outputter/buffer/close_on_empty' : 1,
+\    },
+\}
+
+let g:quickrun_config['tex'] = {
+\    'hook/cd/directory' : '%S:p:h',
+\    'command' : 'latexmk',
+\    'srcfile' : 'main.tex',
+\    'cmdopt' : '-pv',
+\}
+
+let g:quickrun_config['cpp'] = {
+\    'command' : 'g++',
+\    'cmdopt' : '-std=c++11',
+\}
+
+
+" Encoding settings
 " 文字コードをUTF-8に設定する
-set encoding=UTF-8
-set fileencoding=UTF-8
-set termencoding=UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
+set termencoding=utf-8
 
 
-" File
+" File settings
 " ファイル変更中でも他のファイルを開けるようにする
 set hidden
 " ファイル内容が変更されると自動読み込みする
 set autoread
 
 
-" Backup
+" Backup settings
 " undofileを作成しない
 set noundofile
 " swapfileを作らない
@@ -44,7 +133,7 @@ set noswapfile
 set nobackup
 
 
-" Search
+" Search settings
 " インクリメンタルサーチを行う
 set incsearch
 " 検索結果をハイライトする
@@ -57,19 +146,21 @@ set smartcase
 set wrapscan
 
 
-" Display
+" Display settings
+" シンタックスカラーリングを設定する
+syntax on
 " カラースキーマの設定をdesertにする
 colorscheme desert
 " デフォルトの配色をdarkに設定する
 set background=dark
-" シンタックスカラーリングを設定する
-syntax on
 " 編集中のファイル名を表示する
 set title
 " 行番号を表示する
 set number
 " カーソルが何行目の何列目に置かれているかを表示する
 set ruler
+" CursorLineの描画
+set cursorline
 " 入力中のコマンドを表示する
 set showcmd
 " 閉じ括弧の入力時に対応する括弧を表示する
@@ -84,7 +175,7 @@ set list
 set listchars=tab:>\ ,trail:_
 
 
-" Input
+" Input settings
 " ヤンクでクリップボードにコピーする
 set clipboard=unnamed
 " 改行時に前の行のインデントを継続する
@@ -97,3 +188,14 @@ set shiftwidth=4
 set tabstop=4
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
+
+
+" Mapping settings
+let mapleader = "\<Space>"
+
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
+noremap j gj
+noremap k gk
+
+noremap <Leader>j :<C-u>TernDef<CR>

@@ -1,4 +1,6 @@
 # Vim Files
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
+
+# temporary
 .netrwhist
