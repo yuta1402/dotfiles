@@ -2,11 +2,18 @@ if &compatible
     set nocompatible
 endif
 
-set runtimepath+=~/.vim/
+function! s:source_rc(file_name) abort
+    let path = expand('~/.vim/rc/' . a:file_name)
+    execute 'source ' . path
+endfunction
 
-runtime! rc/dein.vim
-runtime! rc/mappings.vim
-runtime! rc/basic.vim
-runtime! rc/view.vim
+if has('vim_starting')
+    call s:source_rc('init.vim')
+endif
+
+call s:source_rc('dein.vim')
+call s:source_rc('mappings.vim')
+call s:source_rc('basic.vim')
+call s:source_rc('view.vim')
 
 filetype plugin indent on
