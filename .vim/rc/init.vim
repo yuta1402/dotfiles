@@ -10,7 +10,6 @@ if IsWindows()
     set shellslash
 endif
 
-" Disable menu
 if has('gui_running')
-    set guioptions=Mc
+    set guioptions=c
 endif
