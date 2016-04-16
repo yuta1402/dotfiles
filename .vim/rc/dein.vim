@@ -15,10 +15,10 @@ if !dein#load_state(s:dein_dir)
     finish
 endif
 
-call dein#begin(s:dein_dir)
-
 let s:toml_path      = '~/.vim/rc/dein.toml'
 let s:toml_lazy_path = '~/.vim/rc/dein_lazy.toml'
+
+call dein#begin(s:dein_dir, [$MYVIMRC, s:toml_path, s:toml_lazy_path])
 
 call dein#load_toml(s:toml_path,      {'lazy': 0})
 call dein#load_toml(s:toml_lazy_path, {'lazy': 1})
