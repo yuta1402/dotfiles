@@ -5,18 +5,19 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/vimproc'
 
 hook_post_update = '''
-  if dein#util#_is_windows()
-    let cmd = 'tools\\update-dll-mingw'
-  elseif dein#util#_is_cygwin()
-    let cmd = 'make -f make_cygwin.mak'
-  elseif dein#util#_is_mac()
-    let cmd = 'make -f make_mac.mak'
-  elseif executable('gmake')
-    let cmd = 'gmake'
-  else
-    let cmd = 'make'
-  endif
-  let g:dein#plugin.build = cmd
+    if dein#util#_is_windows()
+        let cmd = 'tools\\update-dll-mingw'
+    elseif dein#util#_is_cygwin()
+        let cmd = 'make -f make_cygwin.mak'
+    elseif dein#util#_is_mac()
+        let cmd = 'make -f make_mac.mak'
+    elseif executable('gmake')
+        let cmd = 'gmake'
+    else
+        let cmd = 'make'
+    endif
+
+    let g:dein#plugin.build = cmd
 '''
 
 [[plugins]]
@@ -70,8 +71,15 @@ hook_add = '''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-# hook_add = '''
-#     let g:lightline = {
-#         \ 'colorscheme': 'solarized',
-#         \ }
-# '''
+hook_add = '''
+    let g:lightline = {
+    \    'colorscheme': 'wombat',
+    \}
+'''
+
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
+hook_add = '''
+    let g:lucius_style = 'dark'
+    let g:lucius_contrast = 'normal'
+'''

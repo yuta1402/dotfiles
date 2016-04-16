@@ -2,11 +2,11 @@
 
 " Display settings
 " シンタックスカラーリングを設定する
-syntax on
-" カラースキーマの設定をdesertにする
-colorscheme desert
+syntax enable
 " デフォルトの配色をdarkに設定する
 set background=dark
+" カラースキーマの設定をdesertにする
+colorscheme lucius
 " 編集中のファイル名を表示する
 set title
 " 行番号を表示する
