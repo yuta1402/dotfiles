@@ -1,6 +1,5 @@
 " View settings
 
-" Display settings
 " シンタックスカラーリングを設定する
 syntax enable
 " デフォルトの配色をdarkに設定する
@@ -27,3 +26,7 @@ set laststatus=2
 set list
 " 不可視文字を設定する
 set listchars=tab:>\ ,trail:_
+
+if !has('gui_running')
+    set t_Co=256
+endif
