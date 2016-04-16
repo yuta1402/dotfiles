@@ -9,6 +9,6 @@ set imdisable
 
 " Display
 " カラースキーマの設定をdesertにする
-colorscheme desert
+colorscheme lucius
 " アンダーラインを引く(gui)
-highlight CursorLine guibg=#1f1f1f
+" highlight CursorLine guibg=#1f1f1f
