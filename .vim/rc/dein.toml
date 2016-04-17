@@ -70,6 +70,7 @@ hook_add = '''
 repo = 'Shougo/vimfiler.vim'
 hook_add = '''
     let g:vimfiler_as_default_explorer = 1
+    nnoremap <silent> <Leader>f :<C-u>VimFilerExplorer -toggle<CR>
 '''
 
 [[plugins]]
