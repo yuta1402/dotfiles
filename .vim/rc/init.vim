@@ -10,6 +10,11 @@ if IsWindows()
     set shellslash
 endif
 
+" Use ',' instead of '\'
+" Use <Leader> in global plugin
+let g:mapleader = ','
+" let g:mapleader = '\<Space>'
+
 if has('gui_running')
     set guioptions=c
 endif
