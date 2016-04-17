@@ -66,8 +66,11 @@ hook_add = '''
     \}
 '''
 
-# [[plugins]]
-# repo = 'scrooloose/nerdtree'
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+hook_add = '''
+    let g:vimfiler_as_default_explorer = 1
+'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
