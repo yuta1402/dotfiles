@@ -56,7 +56,6 @@ hook_add = '''
     let g:quickrun_config['tex'] = {
     \    'hook/cd/directory' : '%S:p:h',
     \    'command' : 'latexmk',
-    \    'srcfile' : 'main.tex',
     \    'cmdopt' : '-pv',
     \}
 
