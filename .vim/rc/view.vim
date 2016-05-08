@@ -27,6 +27,10 @@ set list
 " 不可視文字を設定する
 set listchars=tab:>\ ,trail:_
 
+" Disable beeping
+set visualbell t_vb=
+set noerrorbells
+
 if !has('gui_running')
     set t_Co=256
 endif
