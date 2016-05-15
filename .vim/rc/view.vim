@@ -4,7 +4,7 @@
 syntax enable
 " デフォルトの配色をdarkに設定する
 set background=dark
-" カラースキーマの設定をdesertにする
+" カラースキーマの設定をluciusにする
 colorscheme lucius
 " 編集中のファイル名を表示する
 set title
