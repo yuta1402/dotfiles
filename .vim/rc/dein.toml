@@ -57,6 +57,7 @@ hook_add = '''
     \    'hook/cd/directory' : '%S:p:h',
     \    'command' : 'latexmk',
     \    'cmdopt' : '-pv',
+    \    'srcfile' : '%:p:h:gs?$?/main.tex?',
     \}
 
     let g:quickrun_config['cpp'] = {
