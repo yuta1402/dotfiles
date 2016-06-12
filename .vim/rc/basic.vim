@@ -48,3 +48,9 @@ set tabstop=4
 set whichwrap=b,s,h,l,<,>,[,]
 " set backspace
 set backspace=indent,eol,start
+
+augroup QfAutoCommands
+  autocmd!
+  " Auto-close quickfix window
+  autocmd WinEnter * if (winnr('$') == 1) && (getbufvar(winbufnr(0), '&buftype')) == 'quickfix' | quit | endif
+augroup END
