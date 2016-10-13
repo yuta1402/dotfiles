@@ -13,7 +13,10 @@ case "${OSTYPE}" in
 		;;
 esac
 
-export PS1='\u@\h[\w]\n\$ '
+if [ -f $HOME/bin/git-prompt.sh ]; then
+	source $HOME/bin/git-prompt.sh
+fi
+export PS1='\u@\h[\w]$(__git_ps1 " (%s)")'$'\n\$ '
 
 if [ -d $HOME/bin ]; then
 	export PATH=$PATH:$HOME/bin
