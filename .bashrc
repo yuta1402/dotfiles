@@ -12,3 +12,13 @@ case "${OSTYPE}" in
 		alias la='ls -la --color'
 		;;
 esac
+
+export PS1='\u@\h[\w]\n\$ '
+
+if [ -d $HOME/bin ]; then
+	export PATH=$PATH:$HOME/bin
+fi
+
+if [ -f $HOME/.bashrc.local ]; then
+	source $HOME/.bashrc.local
+fi
