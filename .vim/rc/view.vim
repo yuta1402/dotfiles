@@ -26,6 +26,8 @@ set laststatus=2
 set list
 " 不可視文字を設定する
 set listchars=tab:>\ ,trail:_
+" Disable more-prompt
+set nomore
 
 " Disable beeping
 set visualbell t_vb=
