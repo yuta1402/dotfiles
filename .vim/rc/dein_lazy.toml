@@ -98,12 +98,14 @@ hook_add = '''
 
     let g:watchdogs_check_BufWritePost_enable = 1
     let g:watchdogs_check_BufWritePost_enables = {
+    \    'c'  : 0,
     \    'cpp': 0,
     \    'go' : 0
     \}
 
     let g:watchdogs_check_CursorHold_enable = 1
     let g:watchdogs_check_CursorHold_enables = {
+    \    'c'  : 0,
     \    'cpp': 0,
     \    'go' : 0
     \}
