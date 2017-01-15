@@ -16,3 +16,9 @@ hook_source = '''
 # [[plugins]]
 # if = 'has("nvim")'
 # repo = 'mhartington/nvim-typescript'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+if = 'has("nvim")'
+on_ft = ['go']
+build = 'make'
