@@ -22,6 +22,8 @@ hook_source = '''
           \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
     let g:neocomplete#force_omni_input_patterns.cpp =
           \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+    let g:neocomplete#force_omni_input_patterns.typescript =
+          \ '[^. *\t]\.\w*\|\h\w*::'
 '''
 
 [[plugins]]
@@ -101,14 +103,16 @@ hook_add = '''
     let g:watchdogs_check_BufWritePost_enables = {
     \    'c'  : 0,
     \    'cpp': 0,
-    \    'go' : 0
+    \    'go' : 0,
+    \    'typescript' : 0,
     \}
 
     let g:watchdogs_check_CursorHold_enable = 1
     let g:watchdogs_check_CursorHold_enables = {
     \    'c'  : 0,
     \    'cpp': 0,
-    \    'go' : 0
+    \    'go' : 0,
+    \    'typescript' : 0,
     \}
 '''
 hook_post_source = '''
