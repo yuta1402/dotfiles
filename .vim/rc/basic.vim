@@ -40,6 +40,8 @@ set clipboard=unnamed
 set autoindent
 " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set smartindent
+" <Tab>キーでSpaceのインデントを挿入する
+set expandtab
 " 行頭での<Tab>の幅
 set shiftwidth=4
 " 行頭以外での<Tab>の幅
