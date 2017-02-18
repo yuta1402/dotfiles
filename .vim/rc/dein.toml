@@ -96,3 +96,6 @@ repo = 'osyo-manga/shabadou.vim'
 
 [[plugins]]
 repo = 'cohama/vim-hier'
+
+[[plugins]]
+repo = 'cohama/agit.vim'
