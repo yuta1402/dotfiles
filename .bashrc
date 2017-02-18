@@ -2,9 +2,9 @@ alias df='df -h'
 
 case "${OSTYPE}" in
 	darwin*)
-		alias ls='ls -G'
-		alias ll='ls -lG'
-		alias la='ls -laG'
+		alias ls='ls -hG'
+		alias ll='ls -lhG'
+		alias la='ls -lahG'
 		;;
 	linux*)
 		alias ls='ls -v --color'
