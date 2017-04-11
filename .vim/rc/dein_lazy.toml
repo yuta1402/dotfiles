@@ -28,6 +28,7 @@ hook_source = '''
 
 [[plugins]]
 repo = 'justmao945/vim-clang'
+if = '!has("nvim")'
 on_ft = ['c', 'cpp']
 hook_source = '''
     let g:clang_auto = 0
