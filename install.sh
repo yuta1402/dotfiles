@@ -10,5 +10,5 @@ do
 	fi
 done
 
-cp -r ${DotDirectory}/.config $HOME
-
+cp -r ${DotDirectory}/.config ${HOME}
+cp -r ${DotDirectory}/bin ${HOME}
