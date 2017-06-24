@@ -35,3 +35,9 @@ hook_source = '''
         let g:deoplete#sources#clang#sort_algo = 'alphabetical'
     endif
 '''
+
+# [[plugins]]
+# repo = 'davidhalter/jedi-vim'
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
