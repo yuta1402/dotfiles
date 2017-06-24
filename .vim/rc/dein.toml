@@ -49,6 +49,10 @@ hook_add = '''
     \    'command' : 'g++',
     \    'cmdopt' : '-std=c++11',
     \}
+
+    let g:quickrun_config['python'] = {
+    \    'command' : 'python3',
+    \}
 '''
 
 [[plugins]]
