@@ -1,0 +1,92 @@
+# class
+snippet class
+	class ${1:#:name}
+	{
+	public:
+		$1(${2});
+		~$1() = default;
+
+	private:
+		${3}
+	};
+
+# struct
+snippet struct
+	struct ${1:#:name}
+	{
+		${0:TARGET}
+	};
+
+# namespace
+snippet namespace
+	namespace ${1:#:name}
+	{
+		${0:TARGET}
+	}
+
+# function
+snippet function
+alias func
+	${1:void} ${2:#:name}(${3:#:args})
+	{
+		${0:TARGET}
+	}
+
+# std::array
+snippet array
+	std::array<${1:T}, ${2:N}> ${3};
+
+# std::list
+snippet list
+	std::list<${1:T}> ${2};
+
+# std::vector
+snippet vector
+	std::vector<${1:T}> ${2};
+
+# std::unordered_map
+snippet umap
+	std::unordered_map<${1:#:key}, ${2:#:value}> ${3};
+
+# std::map
+snippet map
+	std::map<${1:#:key}, ${2:#:value}> ${3};
+
+# range based for
+snippet rfor
+alias fore
+	for(${1:auto&&} ${2:#:var} : ${3:#:container}) {
+		${0:TARGET}
+	}
+
+# doxygen comment for namespace
+snippet doxygen-comment-namespace
+alias dcn
+	/*!
+	@namespace ${1:#:name}
+	@brief ${2:#:brief_description}
+	*/
+
+# doxygen comment for class
+snippet doxygen-comment-class
+alias dcc
+	/*!
+	@class ${1:#:name}
+	@brief ${2:#:brief_description}
+	*/
+
+# doxygen comment for function
+snippet doxygen-comment-function
+alias dcfunc
+	/*!
+	@fn ${1:#:name}
+	@brief ${2:#:brief_description}
+	*/
+
+# doxygen comment for file
+snippet doxygen-comment-file
+alias dcfile
+	/*!
+	@file ${1:#:name}
+	@brief ${2:#:brief_description}
+	*/
