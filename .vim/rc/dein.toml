@@ -49,6 +49,10 @@ hook_add = '''
     \    'command' : 'g++',
     \    'cmdopt' : '-std=c++11',
     \}
+
+    let g:quickrun_config['python'] = {
+    \    'command' : 'python3',
+    \}
 '''
 
 [[plugins]]
@@ -56,6 +60,10 @@ repo = 'Shougo/vimfiler.vim'
 hook_add = '''
     let g:vimfiler_as_default_explorer = 1
     nnoremap <silent> <Leader>f :<C-u>VimFilerExplorer -toggle<CR>
+
+    call vimfiler#custom#profile('default', 'context', {
+    \    'safe' : 0,
+    \})
 '''
 
 [[plugins]]
