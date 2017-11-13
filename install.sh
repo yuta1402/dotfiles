@@ -12,3 +12,5 @@ done
 
 cp -r ${DotDirectory}/.config ${HOME}
 cp -r ${DotDirectory}/bin ${HOME}
+
+ln -snfv ${DotDirectory}/.vim ${HOME}/.config/nvim
