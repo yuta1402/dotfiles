@@ -1,0 +1,5 @@
+# Improve delay escape for vim
+maptimeout 0
+
+# Disable startup message
+startup_message off
