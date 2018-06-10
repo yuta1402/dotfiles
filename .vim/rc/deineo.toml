@@ -10,12 +10,16 @@ hook_source = '''
         let g:deoplete#omni_patterns = {}
     endif
 
-    let g:deoplete#omni_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
+    call deoplete#custom#option('omni_patterns', {
+    \    'typescript': '[^. *\t]\.\w*\|\h\w*::',
+    \})
 '''
 
 # [[plugins]]
 # if = 'has("nvim")'
 # repo = 'mhartington/nvim-typescript'
+# on_ft = ['typescript']
+# build = './install.sh'
 
 [[plugins]]
 repo = 'zchee/deoplete-go'
@@ -57,7 +61,7 @@ hook_source = '''
         let g:deoplete#sources#clang#libclang_path='/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
         let g:deoplete#sources#clang#clang_header='/Library/Developer/CommandLineTools/usr/include'
     elseif has('unix')
-        let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so'
+        let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-6.0/lib/libclang.so.1'
         let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
     endif
 '''
