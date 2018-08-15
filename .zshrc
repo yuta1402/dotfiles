@@ -53,6 +53,27 @@ case "${OSTYPE}" in
         ;;
 esac
 
+# bind C-r to select history by peco
+function peco-select-history() {
+  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+# bind C-] to select repo directory by peco
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+
 if [ -d $HOME/bin ]; then
 	export PATH=$PATH:$HOME/bin
 fi
