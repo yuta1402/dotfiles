@@ -46,13 +46,6 @@ hook_source = '''
     let g:clang_verbose_pmenu = 1
 '''
 
-[[plugins]]
-repo = 'ternjs/tern_for_vim'
-build = 'npm install'
-on_ft = ['javascript']
-hook_source = '''
-    noremap <Leader>j :<C-u>TernDef<CR>
-'''
 
 [[plugins]]
 repo = 'kannokanno/previm'
