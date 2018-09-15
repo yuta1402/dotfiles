@@ -94,6 +94,7 @@ repo = 'cohama/agit.vim'
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
     autocmd BufWritePost * GitGutter
+    set updatetime=100
 '''
 
 [[plugins]]
@@ -108,7 +109,7 @@ hook_add = '''
 
     let g:ale_linters = {
     \   'javascript': ['eslint'],
-    \   'go': ['golint', 'gofmt']
+    \   'go': ['golint', 'gofmt'],
     \}
 
     let g:ale_fixers = {
