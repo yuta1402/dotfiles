@@ -30,23 +30,6 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'justmao945/vim-clang'
-if = '!has("nvim")'
-on_ft = ['c', 'cpp']
-hook_source = '''
-    let g:clang_auto = 0
-
-    let g:clang_c_options = '-std=c11'
-    let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
-    let g:clang_check_syntax_auto = 1
-
-    let g:clang_c_completeopt = 'longest,menuone,preview'
-    let g:clang_cpp_completeopt = 'longest,menuone,preview'
-
-    let g:clang_verbose_pmenu = 1
-'''
-
-[[plugins]]
 repo = 'kannokanno/previm'
 on_cmd = 'PrevimOpen'
 hook_source = '''
