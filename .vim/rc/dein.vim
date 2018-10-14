@@ -19,13 +19,9 @@ call dein#begin(s:dein_dir)
 
 let s:toml_path      = '~/.vim/rc/dein.toml'
 let s:toml_lazy_path = '~/.vim/rc/dein_lazy.toml'
-let s:toml_neo_path  = '~/.vim/rc/deineo.toml'
 
 call dein#load_toml(s:toml_path,      {'lazy': 0})
 call dein#load_toml(s:toml_lazy_path, {'lazy': 1})
-if has('nvim')
-    call dein#load_toml(s:toml_neo_path, {})
-endif
 
 call dein#end()
 call dein#save_state()
