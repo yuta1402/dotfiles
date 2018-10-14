@@ -99,3 +99,33 @@ hook_add = '''
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
 on_ft = ['pug']
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+hook_add = '''
+    nnoremap [denite] <Nop>
+    nmap s [denite]
+
+    nnoremap <silent> [denite]<Space> :<C-u>Denite file/rec:~/.vim/rc<CR>
+
+    nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
+    nnoremap <silent> [denite]f :<C-u>Denite file/rec<CR>
+    nnoremap <silent> [denite]n :<C-u>Denite dein<CR>
+    nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
+'''
+hook_source = '''
+    call denite#custom#option('default', {
+        \ 'prompt': '>',
+        \})
+
+    call denite#custom#map('insert', "<C-n>", '<denite:move_to_next_line>')
+    call denite#custom#map('insert', "<C-p>", '<denite:move_to_previous_line>')
+    call denite#custom#map('insert', "<C-t>", '<denite:do_action:tabopen>')
+    call denite#custom#map('insert', "<C-v>", '<denite:do_action:vsplit>')
+    call denite#custom#map('insert', "<C-s>", '<denite:do_action:split>')
+
+    call denite#custom#map('matcher/ignore_globs', 'ignore_globs', [
+        \ '.git/', '.DS_Store'
+        \])
+'''
