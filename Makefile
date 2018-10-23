@@ -11,7 +11,7 @@ list:
 link:
 	@$(foreach file, $(DOTFILES), ln -snfv $(DOTPATH)/$(file) $(HOME)/$(file);)
 	# nvim
-	ln -snfv ${DotDirectory}/.vim ${HOME}/.config/nvim
+	ln -snfv ${DOTPATH}/.vim ${HOME}/.config/nvim
 
 unlink:
 	@$(foreach file, $(DOTFILES), rm -rfv $(HOME)/$(file);)
