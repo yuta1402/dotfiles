@@ -110,9 +110,43 @@ hook_add = '''
     let g:ale_linters = {
     \   'javascript': ['eslint'],
     \   'go': ['golint', 'gofmt'],
+    \   'cpp': [],
     \}
 
     let g:ale_fixers = {
     \   'javascript': ['prettier'],
     \}
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+    set hidden
+
+    let s:project_directory = './'
+
+    if system('git rev-parse --is-inside-work-tree') == "true\n"
+        let s:git_root_directory = system('git rev-parse --show-cdup')
+        let s:project_directory = expand(fnamemodify(s:git_root_directory, ':p:h'))
+    endif
+
+    let g:LanguageClient_serverCommands = {
+    \   'c': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
+    \   'cpp': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
+    \}
+
+    function LC_maps()
+      if has_key(g:LanguageClient_serverCommands, &filetype)
+        nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
+        nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+        nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+      endif
+    endfunction
+
+    autocmd FileType * call LC_maps()
+
+    let g:LanguageClient_autoStart = 1
+    let g:LanguageClient_hoverPreview = "Never"
 '''
