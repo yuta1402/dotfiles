@@ -151,3 +151,7 @@ hook_source = '''
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = ['python']
+
+[[plugins]]
+repo = 'vim-jp/vim-cpp'
+on_ft = ['c', 'cpp']
