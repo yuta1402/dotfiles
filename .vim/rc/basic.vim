@@ -47,6 +47,8 @@ set expandtab
 set shiftwidth=4
 " 行頭以外での<Tab>の幅
 set tabstop=4
+" キーボードで<TAB>を入力した際、<TAB>を何文字の空白に変換するか
+set softtabstop=4
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 " set backspace
