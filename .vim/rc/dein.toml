@@ -115,6 +115,7 @@ hook_add = '''
 
     let g:ale_fixers = {
     \   'javascript': ['prettier'],
+    \   'json': ['prettier'],
     \}
 '''
 
@@ -141,6 +142,7 @@ hook_add = '''
       if has_key(g:LanguageClient_serverCommands, &filetype)
         nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
         nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+        nnoremap <buffer> <silent> gr :call LanguageClient#textDocument_references()<CR>
         nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
       endif
     endfunction
