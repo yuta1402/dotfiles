@@ -14,3 +14,11 @@ noremap j gj
 noremap k gk
 noremap gj j
 noremap gk k
+
+" Tab
+nnoremap [tab] <Nop>
+nmap t [tab]
+
+for i in range(1, 9)
+    execute 'nnoremap <silent> [tab]'.i ':<C-u>tabnext'.i.'<CR>'
+endfor
