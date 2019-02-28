@@ -18,7 +18,7 @@ link:
 	mkdir -p $(HOME)/.config
 	@$(foreach file, $(CONFIG_DIRS), ln -snfv $(DOTPATH)/$(file) $(HOME)/$(file);)
 	# nvim
-	ln -snfv ${DOTPATH}/.vim ${HOME}/.config/nvim
+	ln -snfv $(DOTPATH)/.vim $(HOME)/.config/nvim
 
 unlink:
 	@$(foreach file, $(DOTFILES), rm -rfv $(HOME)/$(file);)
