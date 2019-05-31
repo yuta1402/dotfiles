@@ -136,6 +136,8 @@ hook_add = '''
     let g:LanguageClient_serverCommands = {
     \   'c': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
     \   'cpp': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
+    \   'javascript': ['javascript-typescript-stdio'],
+    \   'typescript': ['javascript-typescript-stdio'],
     \}
 
     function LC_maps()

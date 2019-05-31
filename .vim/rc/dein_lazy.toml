@@ -33,9 +33,9 @@ on_ft = ['css']
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
-[[plugins]]
-repo = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
+# [[plugins]]
+# repo = 'Quramy/tsuquyomi'
+# on_ft = ['typescript']
 
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
@@ -104,10 +104,6 @@ hook_source = '''
     if !exists('g:deoplete#omni_patterns')
         let g:deoplete#omni_patterns = {}
     endif
-
-    call deoplete#custom#option('omni_patterns', {
-    \    'typescript': '[^. *\t]\.\w*\|\h\w*::',
-    \})
 '''
 
 [[plugins]]
