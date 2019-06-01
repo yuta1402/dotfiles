@@ -138,6 +138,7 @@ hook_add = '''
     \   'cpp': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
     \   'javascript': ['javascript-typescript-stdio'],
     \   'typescript': ['javascript-typescript-stdio'],
+    \   'go': ['gopls'],
     \}
 
     function LC_maps()
