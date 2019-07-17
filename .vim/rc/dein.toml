@@ -116,6 +116,7 @@ hook_add = '''
     let g:ale_fixers = {
     \   'javascript': ['prettier'],
     \   'json': ['prettier'],
+    \   'cpp': [],
     \}
 '''
 
@@ -134,8 +135,8 @@ hook_add = '''
     endif
 
     let g:LanguageClient_serverCommands = {
-    \   'c': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
-    \   'cpp': ['clangd', '-compile-commands-dir=' . s:project_directory . '/build'],
+    \   'c': ['clangd', '--compile-commands-dir=' . s:project_directory . '/build', '--header-insertion=never'],
+    \   'cpp': ['clangd', '--compile-commands-dir=' . s:project_directory . '/build', '--header-insertion=never'],
     \   'javascript': ['javascript-typescript-stdio'],
     \   'typescript': ['javascript-typescript-stdio'],
     \   'go': ['gopls'],
