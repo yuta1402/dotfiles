@@ -1,3 +1,6 @@
+# ヒストリの設定
+HISTSIZE=10000
+
 alias df='df -h'
 
 case "${OSTYPE}" in
