@@ -33,9 +33,10 @@ case "$(uname -m)" in
         exit 1
 esac
 
-url="https://github.com/peco/peco/releases/download/${peco_latest_version}/peco_${os_type}_${os_machine}.tar.gz"
+peco_basename=peco_${os_type}_${os_machine}
+url="https://github.com/peco/peco/releases/download/${peco_latest_version}/${peco_basename}.tar.gz"
 
 mkdir -p "${PREFIX}"
 
 wget -qO- "${url}" |
-    tar -xvz -C "${PREFIX}" --strip-components 1 peco_linux_amd64/peco
+    tar -xvz -C "${PREFIX}" --strip-components 1 ${peco_basename}/peco
