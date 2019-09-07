@@ -22,9 +22,6 @@ case "$(uname -m)" in
     aarch64)
         os_machine="arm64"
         ;;
-    armv6l)
-        os_machine="arm"
-        ;;
     armv7l)
         os_machine="arm"
         ;;
