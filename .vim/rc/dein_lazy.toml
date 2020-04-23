@@ -249,3 +249,7 @@ defx = '''
     nnoremap <silent><buffer><expr> cd
     \ defx#do_action('change_vim_cwd')
 '''
+
+[[plugins]]
+repo = 'vim-scripts/confluencewiki.vim'
+on_ft = ['confluencewiki']
