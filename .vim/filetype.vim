@@ -13,4 +13,7 @@ augroup filetypedetect
 
     " TOML
     autocmd BufNewFile,BufRead *.toml set filetype=toml
+
+    " Confluence Wiki
+    autocmd BufNewFile,BufRead *.confluencewiki set filetype=confluencewiki
 augroup END
