@@ -74,6 +74,15 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
+# pkill by peco
+function peco-pkill () {
+  for pid in $(ps aux | peco | awk '{ print $2 }'); do
+    kill $pid
+    echo "killed ${pid}"
+  done
+}
+alias pk="peco-pkill"
+
 if [ -d $HOME/bin ]; then
 	export PATH=$PATH:$HOME/bin
 fi
