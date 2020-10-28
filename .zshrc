@@ -74,6 +74,40 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
+# pkill by peco
+function peco-pkill () {
+  for pid in $(ps aux | peco | awk '{ print $2 }'); do
+    kill $pid
+    echo "killed ${pid}"
+  done
+}
+alias pk="peco-pkill"
+
+function peco-snippets () {
+  local snippets="$HOME/.etc/snippets.txt"
+
+  if [ ! -e "$snippets" ]; then
+    echo "$snippets is not found."
+    return 1
+  fi
+
+  local line="$(grep -v -e "^\s*#" -e "^\s*$" "$snippets"  | peco --query "$LBUFFER")"
+  if [ -z "$line" ]; then
+    return 1
+  fi
+
+  local selected="$(echo "$line" | sed "s/^\[[^]]*\] *//g")"
+  if [ -z "$selected" ]; then
+    return 1
+  fi
+
+  BUFFER="$selected"
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-snippets
+bindkey '^K' peco-snippets
+
 if [ -d $HOME/bin ]; then
 	export PATH=$PATH:$HOME/bin
 fi
