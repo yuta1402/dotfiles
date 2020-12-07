@@ -97,6 +97,8 @@ hook_add = '''
 
     let g:ale_fixers = {
     \   'javascript': ['prettier'],
+    \   'typescript': ['prettier'],
+    \   'typescriptreact': ['prettier'],
     \   'json': ['prettier'],
     \   'cpp': [],
     \}

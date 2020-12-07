@@ -38,8 +38,12 @@ repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css']
 
 [[plugins]]
+repo = 'ianks/vim-tsx'
+on_ft = ['javascriptreact', 'typescriptreact']
+
+[[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript']
+on_ft = ['typescript', 'typescriptreact']
 
 # [[plugins]]
 # repo = 'Quramy/tsuquyomi'
