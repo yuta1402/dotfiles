@@ -201,6 +201,8 @@ hook_source = '''
         \ 'readonly_icon': 'X',
         \ 'selected_icon': '*',
         \ })
+
+    autocmd FileType defx setlocal nonumber
 '''
 [plugins.ftplugin]
 defx = '''
