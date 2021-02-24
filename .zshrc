@@ -38,6 +38,12 @@ precmd () { vcs_info }
 PROMPT='%n@%m[%~] ${vcs_info_msg_0_}
 $ '
 
+# ディレクトリ名だけで cd できるように設定
+setopt auto_cd
+
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
 alias df='df -h'
 
 case "${OSTYPE}" in
