@@ -55,6 +55,21 @@ esac
 
 alias today='date "+%Y%m%d"'
 
+# use vi mode
+bindkey -v
+
+# set emacs-like keymap on viins
+bindkey -M viins '^A' beginning-of-line
+bindkey -M viins '^B' backward-char
+bindkey -M viins '^D' delete-char-or-list
+bindkey -M viins '^E' end-of-line
+bindkey -M viins '^F' forward-char
+bindkey -M viins '^N' down-line-or-history
+bindkey -M viins '^P' up-line-or-history
+bindkey -M viins '^H' backward-delete-char
+bindkey -M viins '^U' backward-kill-line
+bindkey -M viins '^W' backward-kill-word
+
 # bind C-r to select history by peco
 function peco-select-history() {
   BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER" | sed s/\\\\n/\\$'\n'/g)
