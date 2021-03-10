@@ -267,3 +267,10 @@ defx = '''
 [[plugins]]
 repo = 'vim-scripts/confluencewiki.vim'
 on_ft = ['confluencewiki']
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = ['terraform', 'tf']
+hook_source = '''
+    let g:terraform_fmt_on_save=1
+'''
