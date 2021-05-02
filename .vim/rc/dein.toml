@@ -101,6 +101,7 @@ hook_add = '''
     \   'typescriptreact': ['prettier'],
     \   'json': ['prettier'],
     \   'cpp': [],
+    \   'rust': ['rustfmt']
     \}
 '''
 
@@ -124,6 +125,7 @@ hook_add = '''
     \   'javascript': ['javascript-typescript-stdio'],
     \   'typescript': ['javascript-typescript-stdio'],
     \   'go': ['gopls'],
+    \   'rust': ['rustup', 'run', 'stable', 'rls'],
     \}
 
     function LC_maps()
