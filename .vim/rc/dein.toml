@@ -139,6 +139,7 @@ hook_add = '''
 
     autocmd FileType * call LC_maps()
 
+    set completeopt-=preview
     let g:LanguageClient_autoStart = 1
     let g:LanguageClient_hoverPreview = "Never"
 '''
