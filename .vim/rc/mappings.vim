@@ -15,10 +15,15 @@ noremap k gk
 noremap gj j
 noremap gk k
 
-" Tab
+" Tab page
 nnoremap [tab] <Nop>
 nmap t [tab]
 
 for i in range(1, 9)
     execute 'nnoremap <silent> [tab]'.i ':<C-u>tabnext'.i.'<CR>'
 endfor
+
+nnoremap <silent> [tab]c :<C-u>tablast <bar> tabnew<CR>
+nnoremap <silent> [tab]x :<C-u>tabclose<CR>
+nnoremap <silent> [tab]n :<C-u>tabnext<CR>
+nnoremap <silent> [tab]p :<C-u>tabprevious<CR>
