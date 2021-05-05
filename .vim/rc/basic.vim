@@ -70,3 +70,6 @@ if executable('fcitx-remote')
     endfunction
     autocmd InsertLeave * call Fcitx2en()
 endif
+
+" for python
+let g:python3_host_prog = $PYENV_ROOT.'/versions/nvim-python3/bin/python'
