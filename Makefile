@@ -14,6 +14,17 @@ list: ## Show dotfiles
 	@$(foreach file, $(CONFIG_DIRS), ls -dF $(file);)
 	@$(foreach file, $(BIN_FILES), ls -dF $(file);)
 
+
+init: install link ## Install packages and Create symlink
+
+clean: uninstall unlink ## Uninstall packages and Remove symlink
+
+install: ## Install packages
+	./etc/install.sh
+
+uninstall: ## Uninstall packages
+	./etc/uninstall.sh
+
 link: ## Create symlink to home directory
 	# dotfiles
 	@$(foreach file, $(DOTFILES), ln -snfv $(DOTPATH)/$(file) $(HOME)/$(file);)
@@ -37,10 +48,6 @@ update: ## Safe update repository
 	git push origin master
 	git pull --no-rebase origin master
 	make link
-
-install: link ## Install dotfiles
-
-clean: unlink ## Remove dotfiles
 
 help: ## Show help
 	@echo "Usage:\n    make <command>"

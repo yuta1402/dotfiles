@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install dotfiles
-        run: make install
+        run: make init
 
       - name: Uninstall dotfiles
         run: make clean
