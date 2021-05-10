@@ -23,3 +23,4 @@ install()
 
 install "peco"
 install "asdf"
+install "venv"

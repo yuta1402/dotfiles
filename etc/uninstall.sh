@@ -10,3 +10,4 @@ remove()
 
 remove "peco" "${HOME}/.pyenv"
 remove "asdf" "${HOME}"/.asdf
+remove "venv" "${HOME}/.venv"
