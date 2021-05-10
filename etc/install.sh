@@ -16,7 +16,7 @@ installer_dir="$(dirname ${0})/installer"
 install()
 {
     echo "Installing ${1}"
-    . "${installer_dir}/${1}.sh"
+    bash "${installer_dir}/${1}.sh"
 }
 
 install "peco"
