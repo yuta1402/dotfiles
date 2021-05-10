@@ -14,7 +14,6 @@ list: ## Show dotfiles
 	@$(foreach file, $(CONFIG_DIRS), ls -dF $(file);)
 	@$(foreach file, $(BIN_FILES), ls -dF $(file);)
 
-
 init: install link ## Install packages and Create symlink
 
 clean: uninstall unlink ## Uninstall packages and Remove symlink
