@@ -1,4 +1,6 @@
 # dotfiles
+![linux](https://github.com/yuta1402/dotfiles/workflows/linux-test/badge.svg)
+
 ## Usage
 ```
 Usage:
