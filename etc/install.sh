@@ -21,6 +21,5 @@ install()
     bash "${installer_dir}/${1}.sh"
 }
 
-install "peco"
 install "asdf"
 install "venv"
