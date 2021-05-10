@@ -8,9 +8,10 @@ VERSION="v0.8.0"
 install()
 {
     name="${1}"
+    asdf plugin-add "${name}"
+
     version="${2:-$(asdf latest ${name})}"
 
-    asdf plugin-add "${name}"
     asdf install "${name}" "${version}"
     asdf global "${name}" "${version}"
 }
