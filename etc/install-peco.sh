@@ -12,6 +12,18 @@ peco_latest_version=$(get_latest_release "peco/peco")
 
 os_type=$(uname -s | tr "[:upper:]" "[:lower:]")
 
+case "${os_type}" in
+    darwin)
+        extension="zip"
+        ;;
+    linux)
+        extension="tar.gz"
+        ;;
+    *)
+        echo "$os_type Didn't match anything"
+        exit 1
+esac
+
 case "$(uname -m)" in
     x*)
         os_machine="amd64"
@@ -31,7 +43,8 @@ case "$(uname -m)" in
 esac
 
 peco_basename=peco_${os_type}_${os_machine}
-url="https://github.com/peco/peco/releases/download/${peco_latest_version}/${peco_basename}.tar.gz"
+peco_filename=${peco_basename}.${extension}
+url="https://github.com/peco/peco/releases/download/${peco_latest_version}/${peco_filename}"
 
 mkdir -p "${PREFIX}"
 
