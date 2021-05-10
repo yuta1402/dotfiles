@@ -139,6 +139,11 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init - --no-rehash)"
 fi
 
+# asdf
+if [ -f $HOME/.asdf/asdf.sh ]; then
+    . $HOME/.asdf/asdf.sh
+fi
+
 if [ -d $HOME/bin ]; then
 	export PATH=$PATH:$HOME/bin
 fi
