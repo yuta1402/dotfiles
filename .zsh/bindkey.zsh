@@ -43,6 +43,7 @@ function peco-pkill () {
 }
 alias pk="peco-pkill"
 
+# snippets by peco
 function peco-snippets () {
   local snippets="$HOME/.etc/snippets.txt"
 
