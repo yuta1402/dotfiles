@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 remove()
 {
     echo "removing ${1}"

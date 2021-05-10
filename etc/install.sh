@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 os_type="$(uname -s | tr "[:upper:]" "[:lower:]")"
 
 if [ "${os_type}" == 'darwin' ]; then
