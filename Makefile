@@ -32,8 +32,11 @@ unlink: ## Remove symlink from home directory
 	@$(foreach file, $(BIN_FILES), rm -rfv $(HOME)/$(file);)
 	@rm -rfv $(HOME)/.config/nvim
 
-update: ## Update this repository
-	@git pull origin master
+update: ## Safe update repository
+	make unlink
+	git push origin master
+	git pull --no-rebase origin master
+	make link
 
 install: link ## Install dotfiles
 
