@@ -1,6 +1,6 @@
 DOTPATH           := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 CANDIDATES        := $(wildcard .??*)
-EXCLUSIONS        := .DS_Store .git .gitignore .gitmodules .config
+EXCLUSIONS        := .DS_Store .git .gitignore .gitmodules .github .config
 DOTFILES          := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 CONFIG_CANDIDATES := $(wildcard .config/??*)
 CONFIG_DIRS       := $(filter-out $(EXCLUSIONS), $(CONFIG_CANDIDATES))
