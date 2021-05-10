@@ -8,11 +8,13 @@ Usage:
 
 Commands:
     list       Show dotfiles
+    init       Install packages and Create symlink
+    clean      Uninstall packages and Remove symlink
+    install    Install packages
+    uninstall  Uninstall packages
     link       Create symlink to home directory
     unlink     Remove symlink from home directory
-    update     Update this repository
-    install    Install dotfiles
-    clean      Remove dotfiles
+    update     Safe update repository
     help       Show help
 ```
 
