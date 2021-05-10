@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -eu
 
@@ -8,7 +8,7 @@ VERSION="v0.8.0"
 install()
 {
     name="${1}"
-    version="${2:-$(asdf list all ${1} | tail -n 1)}"
+    version="${2:-$(asdf latest ${name})}"
 
     asdf plugin-add "${name}"
     asdf install "${name}" "${version}"
@@ -22,7 +22,7 @@ main()
 
     install "golang"
     install "nodejs"
-    install "python" "3.9.5"
+    install "python"
 }
 
 main
