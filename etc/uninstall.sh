@@ -8,4 +8,3 @@ remove()
 
 remove "peco" "${HOME}/.pyenv"
 remove "asdf" "${HOME}"/.asdf
-remove "pyenv" "${HOME}/bin/peco"

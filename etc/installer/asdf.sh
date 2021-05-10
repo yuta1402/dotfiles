@@ -1,17 +1,28 @@
 #!/bin/bash
 
+set -eu
+
 PREFIX="${HOME}/.asdf"
 VERSION="v0.8.0"
 
 install()
 {
-    asdf plugin-add ${1}
-    asdf install ${1} $(asdf list all ${1} | tail -n 1)
-    asdf global ${1} $(asdf list ${1} | tail -n 1)
+    name="${1}"
+    version="${2:-$(asdf list all ${1} | tail -n 1)}"
+
+    asdf plugin-add "${name}"
+    asdf install "${name}" "${version}"
+    asdf global "${name}" "${version}"
 }
 
-git clone https://github.com/asdf-vm/asdf.git "${PREFIX}" --branch "${VERSION}"
-. ${HOME}/.asdf/asdf.sh
+main()
+{
+    git clone https://github.com/asdf-vm/asdf.git "${PREFIX}" --branch "${VERSION}"
+    source "${PREFIX}/asdf.sh"
 
-install "golang"
-install "nodejs"
+    install "golang"
+    install "nodejs"
+    install "python" "3.9.5"
+}
+
+main

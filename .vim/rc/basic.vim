@@ -72,4 +72,4 @@ if executable('fcitx-remote')
 endif
 
 " for python
-let g:python3_host_prog = $PYENV_ROOT.'/versions/nvim-python3/bin/python'
+let g:python3_host_prog = $HOME . '/.venv/nvim-python3/bin/python'

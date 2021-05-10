@@ -41,14 +41,6 @@ $ '
 # ディレクトリ名だけで cd できるように設定
 setopt auto_cd
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path --no-rehash)"
-  eval "$(pyenv virtualenv-init - --no-rehash)"
-fi
-
 # asdf
 if [ -f $HOME/.asdf/asdf.sh ]; then
     . $HOME/.asdf/asdf.sh

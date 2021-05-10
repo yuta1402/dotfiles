@@ -21,4 +21,3 @@ install()
 
 install "peco"
 install "asdf"
-install "pyenv"
