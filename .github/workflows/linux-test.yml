@@ -1,0 +1,21 @@
+name: linux-test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Install dotfiles
+        run: make install
+
+      - name: Uninstall dotfiles
+        run: make remove
