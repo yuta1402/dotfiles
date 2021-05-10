@@ -4,8 +4,10 @@ os_type="$(uname -s | tr "[:upper:]" "[:lower:]")"
 
 if [ "${os_type}" == 'darwin' ]; then
     brew bundle --no-lock
-else
+elif [ "${os_type}" == 'linux' ]; then
     # TODO: Add support for linux
+    echo ""
+else
     echo "Your platform ( ${os_type} ) is not supported."
     exit 1
 fi
