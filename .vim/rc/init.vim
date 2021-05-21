@@ -20,3 +20,6 @@ if has('gui_running')
 endif
 
 let $VIMROOT = expand('~/.vim')
+
+" for python
+let g:python3_host_prog = $HOME . '/.venv/nvim-python3/bin/python'
