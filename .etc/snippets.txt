@@ -1,3 +1,7 @@
 # kubectl
-[kubectl logs       ] kubectl get pods --all-namespaces | tail -n +2 | grep -v 'kube-system' | peco | awk '{print $2}' | xargs -I{} kubectl logs {} -f
-[kubectl delete pods] kubectl get pods --all-namespaces | tail -n +2 | grep -v 'kube-system' | peco | awk '{print $2}' | xargs -I{} kubectl delete pods/{}
+[kubectl logs           ] kubectl get pods | tail -n +2 | peco | awk '{print $1}' | xargs -I{} kubectl logs {} -f
+[kubectl delete pods    ] kubectl get pods | tail -n +2 | peco | awk '{print $1}' | xargs -I{} kubectl delete pods/{}
+[kubectl delete cronjobs] kubectl get cronjobs | tail -n +2 | peco | awk '{print $1}' | xargs -I{} kubectl delete cronjobs/{}
+
+# colors
+[print 256 colors] for c in {016..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($((c-16))%6)) -eq 5 ] && echo;done;echo
