@@ -121,23 +121,6 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = '''has('python3')'''
-on_event = 'InsertEnter'
-hook_source = '''
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_ignore_case = 1
-
-    if !exists('g:deoplete#omni_patterns')
-        let g:deoplete#omni_patterns = {}
-    endif
-'''
-
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-on_ft = ['python']
-
-[[plugins]]
 repo = 'vim-jp/vim-cpp'
 on_ft = ['c', 'cpp']
 
@@ -235,3 +218,53 @@ on_ft = ['terraform', 'tf']
 hook_source = '''
     let g:terraform_fmt_on_save=1
 '''
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+depends = 'denops.vim'
+on_event = 'InsertEnter'
+hook_source = '''
+    call ddc#custom#patch_global('sources', [
+    \ 'around',
+    \ 'neosnippet',
+    \ 'ddc-vim-lsp'
+    \ ])
+
+    call ddc#custom#patch_global('sourceOptions', {
+    \ '_': {
+    \   'ignoreCase': v:true,
+    \   'matchers': ['matcher_head'],
+    \   'sorters': ['sorter_rank'],
+    \ },
+    \ 'around': {'mark': 'A'},
+    \ 'neosnippet': {
+    \   'mark': 'ns',
+    \   'dup': v:true,
+    \ },
+    \ 'ddc-vim-lsp': {
+    \   'mark': 'lsp',
+    \   'matchers': ['matcher_head'],
+    \   'forceCompletionPattern': '\.|:|->',
+    \   'minAutoCompleteLength': 1,
+    \ },
+    \ })
+
+    call ddc#enable()
+'''
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'shun/ddc-vim-lsp'
+on_source = 'ddc.vim'
+depends = 'vim-lsp'

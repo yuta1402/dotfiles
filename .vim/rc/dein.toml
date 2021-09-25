@@ -106,45 +106,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = '''
-    set hidden
-
-    let s:project_directory = './'
-
-    if system('git rev-parse --is-inside-work-tree') == "true\n"
-        let s:git_root_directory = system('git rev-parse --show-cdup')
-        let s:project_directory = expand(fnamemodify(s:git_root_directory, ':p:h'))
-    endif
-
-    let g:LanguageClient_serverCommands = {
-    \   'c': ['clangd', '--compile-commands-dir=' . s:project_directory . '/build', '--header-insertion=never'],
-    \   'cpp': ['clangd', '--compile-commands-dir=' . s:project_directory . '/build', '--header-insertion=never'],
-    \   'javascript': ['javascript-typescript-stdio'],
-    \   'typescript': ['javascript-typescript-stdio'],
-    \   'go': ['gopls'],
-    \   'rust': ['rustup', 'run', 'stable', 'rls'],
-    \}
-
-    function LC_maps()
-      if has_key(g:LanguageClient_serverCommands, &filetype)
-        nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
-        nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
-        nnoremap <buffer> <silent> gr :call LanguageClient#textDocument_references()<CR>
-        nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-      endif
-    endfunction
-
-    autocmd FileType * call LC_maps()
-
-    set completeopt-=preview
-    let g:LanguageClient_autoStart = 1
-    let g:LanguageClient_hoverPreview = "Never"
-'''
-
-[[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
     " Disable default mappings
@@ -165,3 +126,27 @@ hook_add = '''
     map  <Leader>w <Plug>(easymotion-bd-w)
     nmap <Leader>w <Plug>(easymotion-overwin-w)
 '''
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+    function! s:on_lsp_buffer_enabled() abort
+        setlocal omnifunc=lsp#complete
+        setlocal signcolumn=yes
+        nmap <buffer> gd <plug>(lsp-definition)
+        nmap <buffer> gr <plug>(lsp-references)
+        nmap <buffer> gi <plug>(lsp-implementation)
+    endfunction
+
+    augroup lsp_install
+        au!
+        " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+        autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+    augroup END
+'''
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
