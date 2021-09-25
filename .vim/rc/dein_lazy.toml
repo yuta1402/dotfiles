@@ -61,15 +61,14 @@ repo = 'mattn/emmet-vim'
 on_ft = ['html', 'css']
 
 [[plugins]]
-repo = 'fatih/vim-go'
+repo = 'mattn/vim-goimports'
 on_ft = ['go']
-hook_add = '''
-    let g:go_fmt_command = "goimports"
-    let g:go_fmt_fail_silently = 1
-
-    let g:go_def_mapping_enabled = 0
-    let g:go_doc_keywordprg_enabled = 0
+hook_source = '''
 '''
+
+[[plugins]]
+repo = 'mattn/vim-goaddtags'
+on_ft = ['go']
 
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
@@ -136,8 +135,8 @@ hook_source = '''
         \ })
 
     call defx#custom#column('icon', {
-        \ 'directory_icon': '+',
-        \ 'opened_icon': '-',
+        \ 'directory_icon': '+ ',
+        \ 'opened_icon': '- ',
         \ 'root_icon': ' ',
         \ })
 
