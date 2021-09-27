@@ -1,0 +1,29 @@
+snippet     funcreceiver
+abbr        func (...) ...() { ... }
+alias       receiver, method
+options     head
+  func (${1}) ${2:fname}(${3}) ${4} {
+    ${0:TARGET:return }
+  }
+
+snippet     testerrorf
+abbr        var test = {...}{...} for {t.Run(){...}}
+alias       terrorf
+options     head
+  if ${1} != ${2} {
+      t.Errorf("$1: %v, want: %v", $1, $2)
+  }
+  ${0:TARGET}
+
+snippet     ctx
+abbr        ctx context.Context
+options     head
+  ctx context.Context
+
+snippet     cmpdiff
+abbr        if diff := cmp.Diff(got, want); diff != "" { t.Errorf() }
+options     head
+  if diff := cmp.Diff(${1:got}, ${2:want}); diff != "" {
+      t.Errorf("error: (-$1, +$2)\n%s", diff)
+  }
+  ${0:TARGET}
