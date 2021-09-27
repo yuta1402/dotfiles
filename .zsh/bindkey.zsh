@@ -68,3 +68,14 @@ function peco-snippets () {
 }
 zle -N peco-snippets
 bindkey '^K' peco-snippets
+
+# change gcloud configurations by peco
+function peco-change-gcloud-conf()
+{
+  selected=$(gcloud config configurations list | awk '{print $1}' | tail -n +2 | peco)
+  if [ -z "${selected}" ]; then
+    return 1
+  fi
+  gcloud config configurations activate "${selected}"
+}
+alias cgc="peco-change-gcloud-conf"
