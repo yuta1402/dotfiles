@@ -136,6 +136,7 @@ hook_source = '''
 
     call defx#custom#column('icon', {
         \ 'directory_icon': '+ ',
+        \ 'file_icon': '  ',
         \ 'opened_icon': '- ',
         \ 'root_icon': ' ',
         \ })
