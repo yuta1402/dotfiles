@@ -228,7 +228,7 @@ hook_source = '''
     call ddc#custom#patch_global('sources', [
     \ 'around',
     \ 'neosnippet',
-    \ 'ddc-vim-lsp'
+    \ 'vim-lsp'
     \ ])
 
     call ddc#custom#patch_global('sourceOptions', {
@@ -242,7 +242,7 @@ hook_source = '''
     \   'mark': 'ns',
     \   'dup': v:true,
     \ },
-    \ 'ddc-vim-lsp': {
+    \ 'vim-lsp': {
     \   'mark': 'lsp',
     \   'matchers': ['matcher_head'],
     \   'forceCompletionPattern': '\.|:|->',
