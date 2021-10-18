@@ -79,3 +79,25 @@ function peco-change-gcloud-conf()
   gcloud config configurations activate "${selected}"
 }
 alias cgc="peco-change-gcloud-conf"
+
+# change kubectx by peco
+function peco-change-kubectx()
+{
+  selected=$(kubectx | awk '{print $1}' | peco)
+  if [ -z "${selected}" ]; then
+    return 1
+  fi
+  kubectx "${selected}"
+}
+alias ckc="peco-change-kubectx"
+
+# change kubens by peco
+function peco-change-kubens()
+{
+  selected=$(kubens | awk '{print $1}' | peco)
+  if [ -z "${selected}" ]; then
+    return 1
+  fi
+  kubens "${selected}"
+}
+alias ckn="peco-change-kubens"
