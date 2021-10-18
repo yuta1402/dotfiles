@@ -136,6 +136,7 @@ hook_add = '''
         nmap <buffer> gd <plug>(lsp-definition)
         nmap <buffer> gr <plug>(lsp-references)
         nmap <buffer> gi <plug>(lsp-implementation)
+        nmap <buffer> gn <plug>(lsp-rename)
     endfunction
 
     augroup lsp_install
