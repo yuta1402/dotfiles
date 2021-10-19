@@ -227,9 +227,9 @@ depends = 'denops.vim'
 on_event = 'InsertEnter'
 hook_source = '''
     call ddc#custom#patch_global('sources', [
+    \ 'vim-lsp',
     \ 'around',
     \ 'neosnippet',
-    \ 'vim-lsp'
     \ ])
 
     call ddc#custom#patch_global('sourceOptions', {
