@@ -101,3 +101,20 @@ function peco-change-kubens()
   kubens "${selected}"
 }
 alias ckn="peco-change-kubens"
+
+function peco-grep-open()
+{
+  if [ -z "$@" ]; then
+    echo "Usage:\n    $0 <word>"
+    return 1
+  fi
+
+  selected=$(grep -r "$@" ./ | peco | awk -F':' '{print $1}')
+  if [ -z "${selected}" ]; then
+    return 1
+  fi
+
+  editor=${EDITOR:-nvim}
+  ${editor} "${selected}"
+}
+alias greo="peco-grep-open"
