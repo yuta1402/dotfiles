@@ -44,7 +44,6 @@ unlink: ## Remove symlink from home directory
 
 update: ## Safe update repository
 	make unlink
-	git push origin master
 	git pull --no-rebase origin master
 	make link
 
