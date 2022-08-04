@@ -22,7 +22,7 @@ jobs:
         run: sudo apt update && sudo apt install zsh
 
       - name: Install dotfiles
-        run: make init
+        run: make link
 
       - name: Run benchmark
         shell: zsh
