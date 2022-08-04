@@ -1,8 +1,6 @@
-#!/bin/zsh
+#!/bin/env zsh
 
 set -eu
-
-echo $SHELL
 
 TIMEFMT='%mE';
 
