@@ -25,9 +25,8 @@ jobs:
         run: make link
 
       - name: Run benchmark
-        shell: zsh
         run: |
-          ./scripts/benchmark.sh > result.json
+          zsh ./scripts/benchmark.sh > result.json
           cat result.json
 
       - name: Store benchmark result
