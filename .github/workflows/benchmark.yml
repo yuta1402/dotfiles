@@ -25,6 +25,7 @@ jobs:
         run: make init
 
       - name: Run benchmark
+        shell: zsh
         run: |
           ./scripts/benchmark.sh > result.json
           cat result.json
