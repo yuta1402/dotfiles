@@ -2,8 +2,8 @@
 
 set -eu
 
-hyperfine 'zsh -i -c exit' --show-output --warmup 3 --runs 10 -u millisecond --export-json result.json > /dev/null
-mean_time=$(cat result.json | jq '.results[0].mean * 1000 | tostring')
+hyperfine 'zsh -i -c exit' --show-output --warmup 3 --runs 10 -u millisecond --export-json bench.json > /dev/null
+mean_time=$(cat bench.json | jq '.results[0].mean * 1000 | tostring')
 
 cat<<EOF
 [
