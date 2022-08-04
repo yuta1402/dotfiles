@@ -1,0 +1,35 @@
+name: benchmark
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  deployments: write
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Install dotfiles
+        run: make init
+
+      - name: Run benchmark
+        run: |
+          ./scripts/benchmark.sh > result.json
+          cat result.json
+
+      - name: Store benchmark result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          tool: "customSmallerIsBetter"
+          output-file-path: result.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
