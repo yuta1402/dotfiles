@@ -21,12 +21,17 @@ jobs:
       - name: Install zsh
         run: sudo apt update && sudo apt install zsh
 
+      - name: Install hyperfine
+        run: |
+          wget https://github.com/sharkdp/hyperfine/releases/download/v1.14.0/hyperfine_1.14.0_amd64.deb
+          sudo dpkg -i hyperfine_1.14.0_amd64.deb
+
       - name: Install dotfiles
         run: make link
 
       - name: Run benchmark
         run: |
-          zsh ./scripts/benchmark.sh > result.json
+          ./scripts/benchmark.sh > result.json
           cat result.json
 
       - name: Store benchmark result

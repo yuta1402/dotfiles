@@ -1,27 +1,16 @@
-#!/bin/zsh
+#!/bin/bash
 
 set -eu
 
-TIMEFMT='%mE';
-
-# warm up
-(time zsh -i -c exit) >/dev/null 2>&1
-
-total_millisec=0
-for i in $(seq 1 10); do
-    millisec=$((time zsh -i -c exit) 2>/dev/stdout >/dev/null)
-    millisec=$(echo ${millisec} | tr -d 'ms')
-    echo "millisec: ${millisec}, total_millisec: ${total_millisec}"
-    total_millisec=$((${total_millisec} + ${millisec}))
-done
-average_millisec=$((${total_millisec} / 10))
+hyperfine 'zsh -i -c exit' --show-output --warmup 3 --runs 10 -u millisecond --export-json result.json > /dev/null
+mean_time=$(cat result.json | jq '.results[0].mean * 1000 | tostring')
 
 cat<<EOF
 [
     {
         "name": "zsh load time",
         "unit": "millisecond",
-        "value": ${average_millisec}
+        "value": ${mean_time}
     }
 ]
 EOF
