@@ -2,6 +2,8 @@
 
 set -eu
 
+echo $SHELL
+
 TIMEFMT='%mE';
 
 # warm up
