@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [ubuntu-20.04, macos-12]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -23,15 +23,18 @@ jobs:
           fetch-depth: 0
 
       - name: Install test dependencies
-        if: runner.os == 'macos'
-        run: brew install zsh hyperfine
-
-      - name: Install test dependencies
         if: runner.os == 'linux'
         run: |
-          sudo apt update && sudo apt install zsh
+          sudo apt update
+          sudo apt install zsh
+
+          # Install hyperfine
           wget https://github.com/sharkdp/hyperfine/releases/download/v1.14.0/hyperfine_1.14.0_amd64.deb
           sudo dpkg -i hyperfine_1.14.0_amd64.deb
+
+      - name: Install test dependencies
+        if: runner.os == 'macos'
+        run: brew install zsh hyperfine
 
       - name: Install dotfiles
         run: make link
