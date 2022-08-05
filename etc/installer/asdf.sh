@@ -24,6 +24,7 @@ main()
     install "golang" "1.19"
     install "nodejs" "16.16.0"
     install "python" "3.10.6"
+    install "deno" "1.24.2"
 }
 
 main
