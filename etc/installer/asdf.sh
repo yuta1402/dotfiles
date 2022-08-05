@@ -3,7 +3,7 @@
 set -eu
 
 PREFIX="${HOME}/.asdf"
-VERSION="v0.8.0"
+VERSION="v0.10.2"
 
 install()
 {
