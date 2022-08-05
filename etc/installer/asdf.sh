@@ -21,9 +21,9 @@ main()
     git clone https://github.com/asdf-vm/asdf.git "${PREFIX}" --branch "${VERSION}"
     source "${PREFIX}/asdf.sh"
 
-    install "golang"
-    install "nodejs"
-    install "python"
+    install "golang" "1.19"
+    install "nodejs" "16.16.0"
+    install "python" "3.10.6"
 }
 
 main
