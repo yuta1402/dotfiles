@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659801620052,
+  "lastUpdate": 1659801644829,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Benchmark": [
@@ -666,6 +666,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (linux)",
             "value": "38.56377698000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "658a0a4860ca73c40a6accd416f5e455b163bf57",
+          "message": "Remove `make clean` from linux-test",
+          "timestamp": "2022-08-07T00:59:19+09:00",
+          "tree_id": "987224d1b4fd59ac7e151d654d2db3e95ae1f640",
+          "url": "https://github.com/yuta1402/dotfiles/commit/658a0a4860ca73c40a6accd416f5e455b163bf57"
+        },
+        "date": 1659801643806,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "74.40491940000003",
             "unit": "millisecond"
           }
         ]
