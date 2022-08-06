@@ -5,26 +5,29 @@ set -eu
 PREFIX="${HOME}/.asdf"
 VERSION="v0.10.2"
 
-install()
+install_plugins()
 {
-    name="${1}"
-    asdf plugin-add "${name}"
+    for plugin in $(cat ${HOME}/.tool-versions | awk '{print $1}'); do
+        if ! [ -d "${HOME}/.asdf/plugins/${plugin}" ]; then
+            asdf plugin-add "${plugin}"
+        fi
+    done
 
-    version="${2:-$(asdf latest ${name})}"
+    asdf install
+}
 
-    asdf install "${name}" "${version}"
-    asdf global "${name}" "${version}"
+install_asdf()
+{
+    if ! [ -d "${HOME}/.asdf" ]; then
+        git clone https://github.com/asdf-vm/asdf.git "${PREFIX}" --branch "${VERSION}"
+        source "${PREFIX}/asdf.sh"
+    fi
 }
 
 main()
 {
-    git clone https://github.com/asdf-vm/asdf.git "${PREFIX}" --branch "${VERSION}"
-    source "${PREFIX}/asdf.sh"
-
-    install "golang" "1.19"
-    install "nodejs" "16.16.0"
-    install "python" "3.10.6"
-    install "deno" "1.24.2"
+    install_asdf
+    install_plugins
 }
 
 main
