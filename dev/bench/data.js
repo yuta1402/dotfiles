@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659802692530,
+  "lastUpdate": 1659802727267,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Benchmark": [
@@ -840,6 +840,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (linux)",
             "value": "39.21300774000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "878d2d4c6fc622f0160a1a7504f9fbc8df51a77a",
+          "message": "Move `brew bundle` to Makefile",
+          "timestamp": "2022-08-07T01:17:18+09:00",
+          "tree_id": "1d26082dee33f023ad3fa4b2c5b3ace56d4f4e90",
+          "url": "https://github.com/yuta1402/dotfiles/commit/878d2d4c6fc622f0160a1a7504f9fbc8df51a77a"
+        },
+        "date": 1659802725681,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "89.40404579999998",
             "unit": "millisecond"
           }
         ]
