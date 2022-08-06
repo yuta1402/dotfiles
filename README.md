@@ -31,4 +31,4 @@ $ make clean
 ```
 
 ## Benchmark
-http://yuta1402.github.io/dotfiles/dev/bench/
+https://yuta1402.github.io/dotfiles/dev/bench/
