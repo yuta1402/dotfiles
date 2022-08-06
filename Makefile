@@ -14,9 +14,9 @@ list: ## Show dotfiles
 	@$(foreach file, $(CONFIG_DIRS), ls -dF $(file);)
 	@$(foreach file, $(BIN_FILES), ls -dF $(file);)
 
-init: install link ## Install packages and Create symlink
+init: link install ## Create symlinks and Install packages
 
-clean: uninstall unlink ## Uninstall packages and Remove symlink
+clean: unlink uninstall ## Remove symlinks and Uninstall packages
 
 install: ## Install packages
 	./etc/install.sh
@@ -24,7 +24,7 @@ install: ## Install packages
 uninstall: ## Uninstall packages
 	./etc/uninstall.sh
 
-link: ## Create symlink to home directory
+link: ## Create symlinks to home directory
 	# dotfiles
 	@$(foreach file, $(DOTFILES), ln -snfv $(DOTPATH)/$(file) $(HOME)/$(file);)
 	# .config directory
@@ -36,7 +36,7 @@ link: ## Create symlink to home directory
 	mkdir -p $(HOME)/bin
 	@$(foreach file, $(BIN_FILES), ln -snfv $(DOTPATH)/$(file) $(HOME)/$(file);)
 
-unlink: ## Remove symlink from home directory
+unlink: ## Remove symlinks from home directory
 	@$(foreach file, $(DOTFILES), rm -rfv $(HOME)/$(file);)
 	@$(foreach file, $(CONFIG_DIRS), rm -rfv $(HOME)/$(file);)
 	@$(foreach file, $(BIN_FILES), rm -rfv $(HOME)/$(file);)
