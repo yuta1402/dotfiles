@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659797703589,
+  "lastUpdate": 1659797744161,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Benchmark": [
@@ -550,6 +550,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (linux)",
             "value": "31.775274980000003",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "310af17db8bda25d742822be69f5a847cc55bfb8",
+          "message": "actions cache test",
+          "timestamp": "2022-08-06T23:54:22+09:00",
+          "tree_id": "e1ade9307f86ab4df739ddd960491864ed488b3a",
+          "url": "https://github.com/yuta1402/dotfiles/commit/310af17db8bda25d742822be69f5a847cc55bfb8"
+        },
+        "date": 1659797742666,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "81.09637288000002",
             "unit": "millisecond"
           }
         ]
