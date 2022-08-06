@@ -14,6 +14,12 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Cache .asdf
+        uses: actions/cache@v3
+        with:
+          path: ~/.asdf
+          key: ${{ runner.os }}-asdf-${{ hashFiles('./etc/installer/asdf.sh', '~/.tool-versions') }}
+
       - name: Install dotfiles
         run: make init
 
