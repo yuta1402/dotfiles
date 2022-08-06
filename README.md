@@ -7,23 +7,28 @@ Usage:
     make <command>
 
 Commands:
-    list       Show dotfiles
-    init       Install packages and Create symlink
-    clean      Uninstall packages and Remove symlink
-    install    Install packages
-    uninstall  Uninstall packages
-    link       Create symlink to home directory
-    unlink     Remove symlink from home directory
-    update     Safe update repository
-    help       Show help
+    list         Show dotfiles
+    init         Create symlinks and Install packages
+    clean        Remove symlinks and Uninstall packages
+    install      Install packages
+    uninstall    Uninstall packages
+    brew/bundle  Brew bundle
+    brew/dump    Brew dump
+    link         Create symlinks to home directory
+    unlink       Remove symlinks from home directory
+    update       Safe update repository
+    help         Show help
 ```
 
 ## Install
 ```
-$ make install
+$ make init
 ```
 
 ## Uninstall
 ```
 $ make clean
 ```
+
+## Benchmark
+http://yuta1402.github.io/dotfiles/dev/bench/
