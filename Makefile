@@ -24,6 +24,12 @@ install: ## Install packages
 uninstall: ## Uninstall packages
 	./etc/uninstall.sh
 
+brew/bundle: ## Brew bundle
+	brew bundle --no-lock
+
+brew/dump: ## Brew dump
+	brew bundle dump --force
+
 link: ## Create symlinks to home directory
 	# dotfiles
 	@$(foreach file, $(DOTFILES), ln -snfv $(DOTPATH)/$(file) $(HOME)/$(file);)
@@ -51,6 +57,6 @@ help: ## Show help
 	@echo "Usage:\n    make <command>"
 	@echo ""
 	@echo "Commands:"
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "    \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z/_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "    \033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: list link unlink update install clean help
+.PHONY: list link unlink brew/* update install clean help
