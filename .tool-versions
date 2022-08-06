@@ -4,3 +4,4 @@ python 3.10.6
 gcloud 396.0.0
 neovim 0.7.2
 deno 1.24.2
+peco 0.5.10
