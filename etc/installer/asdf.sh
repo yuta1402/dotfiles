@@ -20,8 +20,8 @@ install_asdf()
 {
     if ! [ -d "${HOME}/.asdf" ]; then
         git clone https://github.com/asdf-vm/asdf.git "${PREFIX}" --branch "${VERSION}"
-        source "${PREFIX}/asdf.sh"
     fi
+    source "${PREFIX}/asdf.sh"
 }
 
 main()
