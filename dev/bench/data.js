@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659801880214,
+  "lastUpdate": 1659801944455,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Benchmark": [
@@ -753,6 +753,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (macOS)",
             "value": "71.28188362000002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "dd27dcb38826c3b44e43eea3555a772ca2d48f0d",
+          "message": "Fix install_asdf()",
+          "timestamp": "2022-08-07T01:04:59+09:00",
+          "tree_id": "679eb4817e8fc06ad4ee5fda73b57cd6688974b2",
+          "url": "https://github.com/yuta1402/dotfiles/commit/dd27dcb38826c3b44e43eea3555a772ca2d48f0d"
+        },
+        "date": 1659801943802,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (linux)",
+            "value": "33.02697978",
             "unit": "millisecond"
           }
         ]
