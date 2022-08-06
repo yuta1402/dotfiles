@@ -1,4 +1,4 @@
-name: benchmark
+name: test
 
 on:
   push:
@@ -15,12 +15,26 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-20.04, macos-12]
+
     runs-on: ${{ matrix.os }}
+
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
           fetch-depth: 0
+
+      - name: Cache asdf
+        uses: actions/cache@v3
+        with:
+          path: ~/.asdf
+          key: ${{ runner.os }}-asdf-${{ hashFiles('./etc/installer/asdf.sh', '.tool-versions') }}
+
+      - name: Cache venv
+        uses: actions/cache@v3
+        with:
+          path: ~/.venv
+          key: ${{ runner.os }}-asdf-${{ hashFiles('./etc/installer/venv.sh', '.tool-versions') }}
 
       - name: Install test dependencies
         if: runner.os == 'linux'
@@ -37,7 +51,7 @@ jobs:
         run: brew install zsh hyperfine
 
       - name: Install dotfiles
-        run: make link
+        run: make init
 
       - name: Run benchmark
         run: |
