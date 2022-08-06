@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659792337976,
+  "lastUpdate": 1659792369241,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Benchmark": [
@@ -434,6 +434,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (linux)",
             "value": "37.84591572000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "590a1b042796cdd04deef7b40bca6050cfb29ccc",
+          "message": "Move peco to asdf from brew",
+          "timestamp": "2022-08-06T22:24:46+09:00",
+          "tree_id": "7e021ef9cac2d93ab2f966653b9a6c3c767096b3",
+          "url": "https://github.com/yuta1402/dotfiles/commit/590a1b042796cdd04deef7b40bca6050cfb29ccc"
+        },
+        "date": 1659792368687,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "76.13317428000002",
             "unit": "millisecond"
           }
         ]
