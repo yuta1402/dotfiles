@@ -22,6 +22,3 @@ jobs:
 
       - name: Install dotfiles
         run: make init
-
-      - name: Uninstall dotfiles
-        run: make clean
