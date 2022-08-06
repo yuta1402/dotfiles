@@ -1,5 +1,5 @@
 # dotfiles
-![linux](https://github.com/yuta1402/dotfiles/workflows/linux-test/badge.svg)
+[![test](https://github.com/yuta1402/dotfiles/actions/workflows/test.yml/badge.svg)](https://github.com/yuta1402/dotfiles/actions/workflows/test.yml)
 
 ## Usage
 ```
