@@ -24,6 +24,7 @@ if [ -f "${HOME}/.asdf/asdf.sh" ]; then
 fi
 
 hyperfine "${command}" --show-output --warmup 3 --runs 10 -u millisecond --export-json bench.json > /dev/null
+cat bench.json
 mean_time=$(cat bench.json | jq '.results[0].mean * 1000 | tostring')
 
 cat<<EOF
