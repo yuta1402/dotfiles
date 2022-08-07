@@ -2,7 +2,7 @@
 
 set -eu
 
-installer_dir="$(dirname ${0})/installer"
+installer_dir="$(dirname "${0}")/installer"
 install()
 {
     echo "Installing ${1}"

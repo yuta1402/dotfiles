@@ -19,10 +19,10 @@ init: link install ## Create symlinks and Install packages
 clean: unlink uninstall ## Remove symlinks and Uninstall packages
 
 install: ## Install packages
-	./etc/install.sh
+	./scripts/install.sh
 
 uninstall: ## Uninstall packages
-	./etc/uninstall.sh
+	./scripts/uninstall.sh
 
 brew/bundle: ## Brew bundle
 	brew bundle --no-lock
