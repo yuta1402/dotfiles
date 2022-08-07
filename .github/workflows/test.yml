@@ -54,15 +54,30 @@ jobs:
       - name: Install dotfiles
         run: make init
 
-      - name: Run benchmark
+      - name: Run zsh benchmark
         run: |
-          ./scripts/benchmark.sh > result.json
-          cat result.json
+          ./scripts/benchmark.sh 'zsh -i -c exit' 'zsh load time (${{ runner.os }})' > zsh-benchmark-result.json
+          cat zsh-benchmark-result.json
 
-      - name: Store benchmark result
+      - name: Run neovim benchmark
+        run: |
+          ./scripts/benchmark.sh 'nvim --headless -c q' 'nvim load time (${{ runner.os }})' > nvim-benchmark-result.json
+          cat nvim-benchmark-result.json
+
+      - name: Store zsh benchmark result
         uses: benchmark-action/github-action-benchmark@v1
         with:
+          name: Zsh Benchmark
           tool: "customSmallerIsBetter"
-          output-file-path: result.json
+          output-file-path: zsh-benchmark-result.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+
+      - name: Store neovim benchmark result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Neovim Benchmark
+          tool: "customSmallerIsBetter"
+          output-file-path: nvim-benchmark-result.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
