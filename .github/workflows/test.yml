@@ -29,13 +29,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.asdf
-          key: ${{ runner.os }}-asdf-${{ hashFiles('./etc/installer/asdf.sh', '.tool-versions') }}
+          key: ${{ runner.os }}-asdf-${{ hashFiles('./scripts/installer/asdf.sh', '.tool-versions') }}
 
       - name: Cache venv
         uses: actions/cache@v3
         with:
           path: ~/.venv
-          key: ${{ runner.os }}-asdf-${{ hashFiles('./etc/installer/venv.sh', '.tool-versions') }}
+          key: ${{ runner.os }}-asdf-${{ hashFiles('./scripts/installer/venv.sh', '.tool-versions') }}
 
       - name: Install test dependencies
         if: runner.os == 'linux'
