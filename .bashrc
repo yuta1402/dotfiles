@@ -21,6 +21,11 @@ if [ -f $HOME/bin/git-prompt.sh ]; then
 fi
 export PS1='\u@\h[\w]$(__git_ps1 " (%s)")'$'\n\$ '
 
+# asdf
+if [ -f $HOME/.asdf/asdf.sh ]; then
+    source $HOME/.asdf/asdf.sh
+fi
+
 if [ -d $HOME/bin ]; then
 	export PATH=$PATH:$HOME/bin
 fi

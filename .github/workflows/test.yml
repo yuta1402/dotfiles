@@ -55,13 +55,11 @@ jobs:
         run: make init
 
       - name: Run zsh benchmark
-        shell: zsh
         run: |
           ./scripts/benchmark.sh 'zsh -i -c exit' 'zsh load time (${{ runner.os }})' > zsh-benchmark-result.json
           cat zsh-benchmark-result.json
 
       - name: Run neovim benchmark
-        shell: zsh
         run: |
           ./scripts/benchmark.sh 'nvim --headless -c q' 'nvim load time (${{ runner.os }})' > nvim-benchmark-result.json
           cat nvim-benchmark-result.json
