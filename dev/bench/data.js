@@ -2,7 +2,6 @@ window.BENCHMARK_DATA = {
   "lastUpdate": 1659877013908,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
-    "Benchmark": [],
     "Zsh Benchmark": [
       {
         "commit": {
