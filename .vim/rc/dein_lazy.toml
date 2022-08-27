@@ -273,4 +273,4 @@ depends = 'vim-lsp'
 
 [[plugins]]
 repo = 'tokorom/vim-review'
-on_ft = ['re']
+on_ft = ['review']

@@ -16,4 +16,7 @@ augroup filetypedetect
 
     " Confluence Wiki
     autocmd BufNewFile,BufRead *.confluencewiki set filetype=confluencewiki
+
+    " Re:VIEW
+    autocmd BufNewFile,BufRead *.re set filetype=review
 augroup END
