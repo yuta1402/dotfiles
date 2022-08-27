@@ -270,3 +270,7 @@ on_source = 'ddc.vim'
 repo = 'shun/ddc-vim-lsp'
 on_source = 'ddc.vim'
 depends = 'vim-lsp'
+
+[[plugins]]
+repo = 'tokorom/vim-review'
+on_ft = ['re']
