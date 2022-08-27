@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659877013908,
+  "lastUpdate": 1661592504456,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -231,6 +231,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (macOS)",
             "value": "86.45466678000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "78dd1ef5b87210c618fd8582e856621c7cf51dfd",
+          "message": "Add vim-review",
+          "timestamp": "2022-08-27T18:23:36+09:00",
+          "tree_id": "43650ac6d406875f0102344ad64c3326f3e4d083",
+          "url": "https://github.com/yuta1402/dotfiles/commit/78dd1ef5b87210c618fd8582e856621c7cf51dfd"
+        },
+        "date": 1661592503854,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": "34.397495580000005",
             "unit": "millisecond"
           }
         ]
