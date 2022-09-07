@@ -23,7 +23,13 @@ if [ -f "${HOME}/.asdf/asdf.sh" ]; then
     . $HOME/.asdf/asdf.sh
 fi
 
-hyperfine "${command}" --show-output --warmup 3 --runs 10 -u millisecond --export-json bench.json > /dev/null
+hyperfine "${command}" \
+    --show-output \
+    --warmup 3 \
+    --runs 10 \
+    --export-json bench.json \
+    > /dev/null
+
 mean_time=$(cat bench.json | jq '.results[0].mean * 1000 | tostring')
 
 cat<<EOF
