@@ -1,0 +1,24 @@
+{
+  "title": "Control-h sends backspace",
+  "rules": [
+    {
+      "description": "Control-h sends backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [{ "key_code": "delete_or_backspace" }],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^notion\\.id"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
