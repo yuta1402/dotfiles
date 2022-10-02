@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664712424472,
+  "lastUpdate": 1664712426230,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -900,6 +900,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (Linux)",
             "value": "138.7634004",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "64d7502d1aef7b00bd904e024ed582800c77f41b",
+          "message": "Update karabiner settings",
+          "timestamp": "2022-10-02T20:59:23+09:00",
+          "tree_id": "c3c5b91ad78569337a4314847639a3b66d010e5f",
+          "url": "https://github.com/yuta1402/dotfiles/commit/64d7502d1aef7b00bd904e024ed582800c77f41b"
+        },
+        "date": 1664712425604,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (macOS)",
+            "value": "304.90952924000004",
             "unit": "millisecond"
           }
         ]
