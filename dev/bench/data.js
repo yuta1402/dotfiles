@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672668455523,
+  "lastUpdate": 1672668769527,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -550,6 +550,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "33.608271300000006",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "7adf23f5311f983e1b146369a0e7ee3c1cee0fab",
+          "message": "Update neovim and ddc.vim",
+          "timestamp": "2023-01-02T23:03:16+09:00",
+          "tree_id": "fa540085f89d7f7a19277c3bd32157d47ecaec53",
+          "url": "https://github.com/yuta1402/dotfiles/commit/7adf23f5311f983e1b146369a0e7ee3c1cee0fab"
+        },
+        "date": 1672668768918,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "84.44802490000002",
             "unit": "millisecond"
           }
         ]
