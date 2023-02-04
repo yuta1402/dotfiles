@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672668771055,
+  "lastUpdate": 1675497813291,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -579,6 +579,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (macOS)",
             "value": "84.44802490000002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "4de8debb9fc6a80fefe55aadf73d34c13632087d",
+          "message": "Add espanso config files",
+          "timestamp": "2023-02-04T16:58:59+09:00",
+          "tree_id": "4a3ae60b5f6ca5b5330f97753ac4e7492492dd23",
+          "url": "https://github.com/yuta1402/dotfiles/commit/4de8debb9fc6a80fefe55aadf73d34c13632087d"
+        },
+        "date": 1675497813003,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": "34.69201688000001",
             "unit": "millisecond"
           }
         ]
