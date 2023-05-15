@@ -7,3 +7,8 @@
 
 # colors
 [print 256 colors] for c in {016..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($((c-16))%6)) -eq 5 ] && echo;done;echo
+
+# pt-query-digest
+[pt-query-digest order by query time   ] pt-query-digest --order-by Query_time:sum
+[pt-query-digest order by query count  ] pt-query-digest --order-by Query_time:cnt
+[pt-query-digest order by rows examined] pt-query-digest --order-by Rows_examined:sum
