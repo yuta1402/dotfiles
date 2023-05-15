@@ -118,3 +118,14 @@ function peco-grep-open()
   ${editor} "${selected}"
 }
 alias greo="peco-grep-open"
+
+# change AWS_PROFILE by peco
+function peco-change-aws-profile()
+{
+  selected=$(cat ~/.aws/config | grep '\[profile .*]' | sed -e "s/\[profile \(.*\)\]/\1/g" | sort | peco)
+  if [ -z "${selected}" ]; then
+    return 1
+  fi
+  export AWS_PROFILE=${selected}
+}
+alias cawsp="peco-change-aws-profile"
