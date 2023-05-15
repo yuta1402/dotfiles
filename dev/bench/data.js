@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1684129976438,
+  "lastUpdate": 1684129978890,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1364,6 +1364,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (Linux)",
             "value": "126.52770732000002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "2b9c4ed35f2f01e416beb1f17bcb1362809ff4ac",
+          "message": "Add RectangleConfig.json",
+          "timestamp": "2023-05-15T14:46:05+09:00",
+          "tree_id": "083639e8b1f094914618a4773ca369ae6c9df279",
+          "url": "https://github.com/yuta1402/dotfiles/commit/2b9c4ed35f2f01e416beb1f17bcb1362809ff4ac"
+        },
+        "date": 1684129977838,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (macOS)",
+            "value": "286.23312094000005",
             "unit": "millisecond"
           }
         ]
