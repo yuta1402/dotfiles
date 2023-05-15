@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1684141689325,
+  "lastUpdate": 1684141767138,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -840,6 +840,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "38.061573720000005",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "f0afc40051dbe3da2264b0cae239a78b98a108ac",
+          "message": "Remove shiftit from Brewfile",
+          "timestamp": "2023-05-15T18:06:08+09:00",
+          "tree_id": "ffcb4848d9794b027bd7f77cbfa91d857227f739",
+          "url": "https://github.com/yuta1402/dotfiles/commit/f0afc40051dbe3da2264b0cae239a78b98a108ac"
+        },
+        "date": 1684141765807,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "72.69202116",
             "unit": "millisecond"
           }
         ]
