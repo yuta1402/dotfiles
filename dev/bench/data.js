@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1684138723386,
+  "lastUpdate": 1684138725146,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1538,6 +1538,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": "289.2999100999999",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "f19729f5327b5588b95108f11da67766be682ac7",
+          "message": "Fix tmux colors",
+          "timestamp": "2023-05-15T17:16:29+09:00",
+          "tree_id": "5ff53aabb036ecb43479615feb860679bb107283",
+          "url": "https://github.com/yuta1402/dotfiles/commit/f19729f5327b5588b95108f11da67766be682ac7"
+        },
+        "date": 1684138724556,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "174.18570956000002",
             "unit": "millisecond"
           }
         ]
