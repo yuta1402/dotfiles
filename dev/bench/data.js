@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1675497934178,
+  "lastUpdate": 1684129824547,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -637,6 +637,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (macOS)",
             "value": "70.02273890000002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "2b9c4ed35f2f01e416beb1f17bcb1362809ff4ac",
+          "message": "Add RectangleConfig.json",
+          "timestamp": "2023-05-15T14:46:05+09:00",
+          "tree_id": "083639e8b1f094914618a4773ca369ae6c9df279",
+          "url": "https://github.com/yuta1402/dotfiles/commit/2b9c4ed35f2f01e416beb1f17bcb1362809ff4ac"
+        },
+        "date": 1684129824243,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": "32.214495140000004",
             "unit": "millisecond"
           }
         ]
