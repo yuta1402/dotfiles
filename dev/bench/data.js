@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1684135866429,
+  "lastUpdate": 1684135868024,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1422,6 +1422,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": "286.23312094000005",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "17811cd9e792fcf4766e5884315eb285bc9ef6f1",
+          "message": "Remove google-chrome from Brewfile",
+          "timestamp": "2023-05-15T16:28:55+09:00",
+          "tree_id": "37dc44f550a3960c0f1d0a8e243ddfdf2db87b24",
+          "url": "https://github.com/yuta1402/dotfiles/commit/17811cd9e792fcf4766e5884315eb285bc9ef6f1"
+        },
+        "date": 1684135867473,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "133.96805882",
             "unit": "millisecond"
           }
         ]
