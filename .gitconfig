@@ -5,5 +5,4 @@
 [pull]
 	rebase = true
 [ghq]
-	root = ~/opt/go/src
 	root = ~/repos
