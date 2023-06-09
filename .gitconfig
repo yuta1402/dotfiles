@@ -6,3 +6,16 @@
 	rebase = true
 [ghq]
 	root = ~/repos
+[alias]
+    b = branch
+    bd = branch -d
+
+    cm = commit
+    cmm = commit -m
+
+    d = diff
+
+    st = status
+
+    sw = switch
+    swm = !git symbolic-ref refs/remotes/origin/HEAD | cut -f4 -d'/' | xargs git switch
