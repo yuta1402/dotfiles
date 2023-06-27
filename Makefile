@@ -59,4 +59,4 @@ help: ## Show help
 	@echo "Commands:"
 	@grep -E '^[a-zA-Z/_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "    \033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: list link unlink brew/* update install clean help
+.PHONY: all list init clean install uninstall brew/* link unlink update help
