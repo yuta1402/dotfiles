@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1693298034409,
+  "lastUpdate": 1693298299157,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1072,6 +1072,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "40.4321801",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "43136d30be2472cf204f3139504967ef32bb1af6",
+          "message": "Add kube context and aws account to prompt",
+          "timestamp": "2023-08-29T17:25:11+09:00",
+          "tree_id": "4de77e647db6e4436521efeedf9cd82bb3225045",
+          "url": "https://github.com/yuta1402/dotfiles/commit/43136d30be2472cf204f3139504967ef32bb1af6"
+        },
+        "date": 1693298298331,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "74.9971485",
             "unit": "millisecond"
           }
         ]
