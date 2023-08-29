@@ -21,23 +21,6 @@ setopt hist_ignore_all_dups
 # historyコマンドは履歴に残さない
 setopt hist_no_store
 
-autoload -Uz colors
-autoload -Uz vcs_info
-
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u(%b)%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-
-# PROMPT変数内で変数参照
-setopt prompt_subst
-
-precmd () { vcs_info }
-
-PROMPT='%n@%m[%~] ${vcs_info_msg_0_}
-$ '
-
 # ディレクトリ名だけで cd できるように設定
 setopt auto_cd
 

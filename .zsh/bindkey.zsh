@@ -87,6 +87,7 @@ function peco-change-kubectx()
   if [ -z "${selected}" ]; then
     return 1
   fi
+  export SHOW_KUBE_INFO_PROMPT=1
   kubectx "${selected}"
 }
 alias ckc="peco-change-kubectx"
@@ -127,5 +128,8 @@ function peco-change-aws-profile()
     return 1
   fi
   export AWS_PROFILE=${selected}
+  export SHOW_AWS_INFO_PROMPT=1
+  echo "switched to profile \"${selected}\""
 }
+alias awsp="peco-change-aws-profile"
 alias cawsp="peco-change-aws-profile"
