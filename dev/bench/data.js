@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1693559940617,
+  "lastUpdate": 1693559942617,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -2263,6 +2263,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (Linux)",
             "value": "158.12620693999997",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "43136d30be2472cf204f3139504967ef32bb1af6",
+          "message": "Add kube context and aws account to prompt",
+          "timestamp": "2023-08-29T17:25:11+09:00",
+          "tree_id": "4de77e647db6e4436521efeedf9cd82bb3225045",
+          "url": "https://github.com/yuta1402/dotfiles/commit/43136d30be2472cf204f3139504967ef32bb1af6"
+        },
+        "date": 1693559941977,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (macOS)",
+            "value": "280.95264806000006",
             "unit": "millisecond"
           }
         ]
