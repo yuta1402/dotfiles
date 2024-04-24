@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713977099400,
+  "lastUpdate": 1713977100279,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -2321,6 +2321,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": "280.95264806000006",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "c4f58f0f4d8aeffc7b1bff9039e9cb40acc8e935",
+          "message": "Update the version of Ubuntu",
+          "timestamp": "2024-04-25T01:40:49+09:00",
+          "tree_id": "0f1996b0aaf1755684399016369a3bcc33ce0493",
+          "url": "https://github.com/yuta1402/dotfiles/commit/c4f58f0f4d8aeffc7b1bff9039e9cb40acc8e935"
+        },
+        "date": 1713977100018,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "112.91719812000001",
             "unit": "millisecond"
           }
         ]
