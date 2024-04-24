@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1713977100279,
+  "lastUpdate": 1713977472883,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1188,6 +1188,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "25.789742900000004",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "c4f58f0f4d8aeffc7b1bff9039e9cb40acc8e935",
+          "message": "Update the version of Ubuntu",
+          "timestamp": "2024-04-25T01:40:49+09:00",
+          "tree_id": "0f1996b0aaf1755684399016369a3bcc33ce0493",
+          "url": "https://github.com/yuta1402/dotfiles/commit/c4f58f0f4d8aeffc7b1bff9039e9cb40acc8e935"
+        },
+        "date": 1713977472333,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "126.10132777999999",
             "unit": "millisecond"
           }
         ]
