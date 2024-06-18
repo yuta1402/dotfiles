@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1718724615998,
+  "lastUpdate": 1718724618491,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -2843,6 +2843,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (Linux)",
             "value": "113.36361176000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "b723a1e7fdc26c97b24a43e5c34de47308498223",
+          "message": "Fix deno version",
+          "timestamp": "2024-06-19T00:24:52+09:00",
+          "tree_id": "435163db62fc553b23be9d930ecad23a42ed4c8e",
+          "url": "https://github.com/yuta1402/dotfiles/commit/b723a1e7fdc26c97b24a43e5c34de47308498223"
+        },
+        "date": 1718724617478,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (macOS)",
+            "value": "260.80956584000006",
             "unit": "millisecond"
           }
         ]
