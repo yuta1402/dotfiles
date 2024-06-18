@@ -148,6 +148,20 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
+hook_add = '''
+    " ref: https://qiita.com/ogrium/items/95660cf5655e455d6f22
+    let g:lsp_settings = {
+    \  'yaml-language-server': {
+    \    'workspace_config': {
+    \      'yaml': {
+    \        'schemaStore': {
+    \          'enable': v:false,
+    \        },
+    \      }
+    \    }
+    \  },
+    \}
+'''
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
