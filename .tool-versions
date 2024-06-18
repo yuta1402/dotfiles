@@ -2,6 +2,6 @@ nodejs 20.13.1
 golang 1.19
 python 3.10.6
 neovim 0.9.5
-deno 1.43.3
+deno 1.42.4
 peco 0.5.10
 ghq 1.3.0
