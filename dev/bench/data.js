@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1719466348527,
+  "lastUpdate": 1719466460524,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1478,6 +1478,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "25.712592400000002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "122df30f79c63b08ae6ec219096bf6f590b7c2f8",
+          "message": "Add totegamma/gotogh.nvim",
+          "timestamp": "2024-06-27T14:29:31+09:00",
+          "tree_id": "7d3298f08beb407abb137e44b85e6d4578cef3ce",
+          "url": "https://github.com/yuta1402/dotfiles/commit/122df30f79c63b08ae6ec219096bf6f590b7c2f8"
+        },
+        "date": 1719466459612,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "66.95470094",
             "unit": "millisecond"
           }
         ]
