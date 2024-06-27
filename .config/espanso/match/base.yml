@@ -16,3 +16,41 @@ matches:
         type: date
         params:
           format: "%Y/%m/%d"
+
+  # Print the current date without slash
+  - triggers: [";dt"]
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y%m%d"
+
+  # Print your password
+  #
+  # usage:
+  #   `security add-generic-password -a <account> -s main-password -w` で keychain にパスワードを保存しておく
+  #
+  - triggers: [";pass"]
+    replace: "{{password}}"
+    vars:
+      - name: password
+        type: shell
+        params:
+          cmd: "security find-generic-password -s main-password -w"
+
+  # Confluence
+  - trigger: ";code"
+    replace: "{code: language=bash"
+
+  - trigger: ";diff"
+    replace: "{code: language=diff"
+
+  - trigger: ";command"
+    replace: "{code: language=bash | theme=RDark | title=command"
+
+  - trigger: ";result"
+    replace: "{code: language=bash | title=実行結果"
+
+  - trigger: ";sql"
+    replace: "{code: language=sql | title=SQL"
