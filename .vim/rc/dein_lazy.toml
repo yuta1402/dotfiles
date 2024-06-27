@@ -280,3 +280,6 @@ depends = 'vim-lsp'
 [[plugins]]
 repo = 'tokorom/vim-review'
 on_ft = ['review']
+
+[[plugins]]
+repo = 'github/copilot.vim'
