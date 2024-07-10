@@ -17,3 +17,6 @@ case "${OSTYPE}" in
 esac
 
 alias today='date "+%Y%m%d"'
+
+# k9s
+alias k9s="LANG=en_US.UTF-8 k9s"
