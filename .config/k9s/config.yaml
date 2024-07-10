@@ -1,0 +1,7 @@
+k9s:
+  readOnly: true
+  ui:
+    # Set to true to hide K9s header. Default false
+    headless: false
+    # Set to true to hide the K9S logo Default false
+    logoless: true
