@@ -232,6 +232,7 @@ hook_source = '''
     \ 'vim-lsp',
     \ 'around',
     \ 'neosnippet',
+    \ 'file',
     \ ])
 
     call ddc#custom#patch_global('sourceOptions', {
@@ -250,6 +251,11 @@ hook_source = '''
     \   'matchers': ['matcher_head'],
     \   'forceCompletionPattern': '\.|:|->',
     \   'minAutoCompleteLength': 1,
+    \ },
+    \ 'file': {
+    \   'mark': 'f',
+    \   'isVolatile': v:true,
+    \   'forceCompletionPattern': '\S/\S*',
     \ },
     \ })
 
@@ -276,6 +282,10 @@ on_source = 'ddc.vim'
 repo = 'shun/ddc-vim-lsp'
 on_source = 'ddc.vim'
 depends = 'vim-lsp'
+
+[[plugins]]
+repo = 'LumaKernel/ddc-source-file'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'tokorom/vim-review'
