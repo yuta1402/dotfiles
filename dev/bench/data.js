@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1729083458966,
+  "lastUpdate": 1729083460025,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -3249,6 +3249,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": "269.31518126000003",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "45bfd41a4184cf08375ee4ac83e378063392dc9a",
+          "message": "Remove \"homebrew/cask-fonts\" from Brewfile",
+          "timestamp": "2024-10-16T21:55:51+09:00",
+          "tree_id": "322c0ed0bacf137ef08ba76d4bde4747c9dc3bf7",
+          "url": "https://github.com/yuta1402/dotfiles/commit/45bfd41a4184cf08375ee4ac83e378063392dc9a"
+        },
+        "date": 1729083459677,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "112.81059901999998",
             "unit": "millisecond"
           }
         ]
