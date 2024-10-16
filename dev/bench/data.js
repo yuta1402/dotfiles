@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1720598191973,
+  "lastUpdate": 1729079838187,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1565,6 +1565,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (macOS)",
             "value": "77.73478644000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "7d4ddf46df3dc3ef8c38ee6d3d4e81f41c1ff19c",
+          "message": "Update Brewfile",
+          "timestamp": "2024-10-16T20:54:13+09:00",
+          "tree_id": "f076dac29dfffd587d75d41d71f7f5fae28f8f47",
+          "url": "https://github.com/yuta1402/dotfiles/commit/7d4ddf46df3dc3ef8c38ee6d3d4e81f41c1ff19c"
+        },
+        "date": 1729079837968,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": "25.406460940000002",
             "unit": "millisecond"
           }
         ]
