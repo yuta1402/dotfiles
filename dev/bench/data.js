@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1729960617528,
+  "lastUpdate": 1729960618510,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -3365,6 +3365,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": "202.95930675999995",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "fa72e1f8fd8ddfe0b6ee81cffe26f8797791c373",
+          "message": "Add wezterm",
+          "timestamp": "2024-10-27T01:33:44+09:00",
+          "tree_id": "dcc13ff900df702507d8c64fc5472fd8904dc278",
+          "url": "https://github.com/yuta1402/dotfiles/commit/fa72e1f8fd8ddfe0b6ee81cffe26f8797791c373"
+        },
+        "date": 1729960618192,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "112.57644850000001",
             "unit": "millisecond"
           }
         ]
