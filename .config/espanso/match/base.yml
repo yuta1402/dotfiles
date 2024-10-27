@@ -8,7 +8,7 @@
 # Matches are substitution rules: when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
-  # Print the current date
+  # Print the current date with slash
   - triggers: [";date", ";today"]
     replace: "{{mydate}}"
     vars:
@@ -17,7 +17,7 @@ matches:
         params:
           format: "%Y/%m/%d"
 
-  # Print the current date without slash
+  # Print the current date
   - triggers: [";dt"]
     replace: "{{mydate}}"
     vars:
@@ -25,6 +25,24 @@ matches:
         type: date
         params:
           format: "%Y%m%d"
+
+  # Print the current date with -
+  - triggers: [";d-"]
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  # Print the current date with /
+  - triggers: [";d/"]
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y/%m/%d"
 
   # Print your password
   #
