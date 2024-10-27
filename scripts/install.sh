@@ -10,4 +10,5 @@ install()
 }
 
 install "asdf"
+install "sheldon"
 install "venv"
