@@ -7,3 +7,6 @@
 
 # Espanso
 .config/espanso/match/local.yml
+
+# Karabiner
+.config/karabiner/automatic_backups/*
