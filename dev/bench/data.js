@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1730001567979,
+  "lastUpdate": 1730001633754,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1768,6 +1768,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "25.06537936",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "e37969774ccf745ac59186eef97b6d3c18442f23",
+          "message": "Change macos runner from macos-12 to macos-14",
+          "timestamp": "2024-10-27T12:57:31+09:00",
+          "tree_id": "7161c31b64121d7eb74da05601623dbe2ae35bfd",
+          "url": "https://github.com/yuta1402/dotfiles/commit/e37969774ccf745ac59186eef97b6d3c18442f23"
+        },
+        "date": 1730001632536,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (macOS)",
+            "value": "36.55454590000001",
             "unit": "millisecond"
           }
         ]
