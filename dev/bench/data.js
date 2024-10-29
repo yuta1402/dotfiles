@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1730018796718,
+  "lastUpdate": 1730179322988,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -1855,6 +1855,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (macOS)",
             "value": "33.12318994",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "e781ea19beaf55b8f435f908896bba54d89f4df7",
+          "message": "Update karabiner.json",
+          "timestamp": "2024-10-29T14:20:32+09:00",
+          "tree_id": "0fc9a367349ac80dbf1fb0e1e7b8e1260ec17a66",
+          "url": "https://github.com/yuta1402/dotfiles/commit/e781ea19beaf55b8f435f908896bba54d89f4df7"
+        },
+        "date": 1730179322631,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": "26.07386274",
             "unit": "millisecond"
           }
         ]
