@@ -1,13 +1,18 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.color_scheme = "Builtin Solarized Dark"
+-- config.color_scheme = "Builtin Solarized Dark"
+local solarized_dark_color = wezterm.color.get_builtin_schemes()["Builtin Solarized Dark"]
+solarized_dark_color.brights[1] = '#555555'
+config.colors = solarized_dark_color;
 
+-- font
 config.font = wezterm.font("Ricty Diminished", {weight="Regular", stretch="Normal", style="Normal"})
 config.font_size = 18
 
 config.hide_tab_bar_if_only_one_tab = true
 
+-- key
 local act = wezterm.action
 config.keys = {
   {
