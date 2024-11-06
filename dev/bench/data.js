@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1730907271782,
+  "lastUpdate": 1730907273415,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -4032,6 +4032,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (Linux)",
             "value": "114.05808822",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "f1b66f0498968e116c55ba42b2164b318266588e",
+          "message": "Add rc/ddu.vim and rc/ddu-ui-filer.vim",
+          "timestamp": "2024-11-07T00:32:28+09:00",
+          "tree_id": "02c8cebfd7114d282ef5857d149a99030e7d1eda",
+          "url": "https://github.com/yuta1402/dotfiles/commit/f1b66f0498968e116c55ba42b2164b318266588e"
+        },
+        "date": 1730907272772,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "114.81725792000002",
             "unit": "millisecond"
           }
         ]
