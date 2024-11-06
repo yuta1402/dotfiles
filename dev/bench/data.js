@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1730905320418,
+  "lastUpdate": 1730905322760,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -3945,6 +3945,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": "119.05499594000003",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "6011c30efdb2dcbbfac372ec1bbc5d6425bc8051",
+          "message": "Use ddu.vim and ddu-ui-filer instead of defx.nvim",
+          "timestamp": "2024-11-06T23:59:54+09:00",
+          "tree_id": "c1cbe0d6230c683f072e5d4eddccdda1fd472104",
+          "url": "https://github.com/yuta1402/dotfiles/commit/6011c30efdb2dcbbfac372ec1bbc5d6425bc8051"
+        },
+        "date": 1730905322401,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": "114.05808822",
             "unit": "millisecond"
           }
         ]
