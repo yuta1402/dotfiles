@@ -13,6 +13,8 @@ if &runtimepath !~# '/dein.vim'
     execute 'set runtimepath^=' . substitute(fnamemodify(s:dein_repo_dir, ':p'), '/$', '', '')
 endif
 
+let $BASE_DIR = '<sfile>'->expand()->fnamemodify(':h')
+
 if !dein#load_state(s:dein_dir)
     finish
 endif
