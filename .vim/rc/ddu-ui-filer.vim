@@ -1,13 +1,13 @@
 " hook_add {{{
 nnoremap <silent> <Leader>f <Cmd>Ddu
-    \ -name=filer-`tabpagenr()` -ui=filer -resume
+    \ -name=filer-`tabpagenr()` -ui=filer -resume -sync file
     \ -source-option-file-columns=filename
     \ <CR>
 " }}}
 
 " hook_source {{{
-" autocmd myautocmd tabenter,winenter,cursorhold,focusgained *
-"     \ call ddu#ui#do_action('checkitems')
+autocmd tabenter,winenter,cursorhold,focusgained *
+    \ call ddu#ui#do_action('checkItems')
 " }}}
 
 " ddu-filer {{{
@@ -20,7 +20,7 @@ nnoremap <buffer> c
     \   ['itemAction', #{ name: 'copy' }],
     \   ['clearSelectAllItems'],
     \ ])<CR>
-nnoremap <buffer> d
+nnoremap <buffer> dd
     \ <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'delete' })<CR>
 nnoremap <buffer> m
     \ <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'move' })<CR>

@@ -30,6 +30,12 @@ call ddu#custom#patch_global({
     \     narrow: #{
     \       quit: v:false,
     \     },
+    \     newDirectory: #{
+    \       quit: v:false,
+    \     },
+    \     newFile: #{
+    \       quit: v:false,
+    \     },
     \     open: #{
     \       quit: v:false,
     \     },
