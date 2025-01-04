@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1730907274919,
+  "lastUpdate": 1735996634509,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -2058,6 +2058,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": "33.86342184000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "a8ecd637fec5b99771ec1358a8304c863bea0ff8",
+          "message": "Use defx.nvim instead of ddu-ui-filer",
+          "timestamp": "2025-01-04T22:13:58+09:00",
+          "tree_id": "db52b5075da21ab00336893ee3e75c289026b8ad",
+          "url": "https://github.com/yuta1402/dotfiles/commit/a8ecd637fec5b99771ec1358a8304c863bea0ff8"
+        },
+        "date": 1735996634265,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": "32.7282672",
             "unit": "millisecond"
           }
         ]
