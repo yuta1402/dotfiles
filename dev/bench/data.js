@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762917460359,
+  "lastUpdate": 1762917461154,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -4235,6 +4235,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (Linux)",
             "value": "112.85377371999998",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "1d70f6dd6adc6bc22e6158e784ac1f7e3a446175",
+          "message": "Use mise",
+          "timestamp": "2025-11-12T12:13:45+09:00",
+          "tree_id": "43324078c0e991ae7a80f92964eeabe0d0bce3b3",
+          "url": "https://github.com/yuta1402/dotfiles/commit/1d70f6dd6adc6bc22e6158e784ac1f7e3a446175"
+        },
+        "date": 1762917460959,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (Linux)",
+            "value": 113.75868580000001,
             "unit": "millisecond"
           }
         ]
