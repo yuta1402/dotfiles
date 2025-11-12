@@ -52,6 +52,8 @@ jobs:
         run: brew install zsh hyperfine
 
       - name: Install dotfiles
+        env:
+          github_token: ${{ secrets.github_token }}
         run: make init
 
       - name: Run zsh benchmark
