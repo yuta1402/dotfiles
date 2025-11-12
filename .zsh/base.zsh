@@ -29,6 +29,11 @@ if [ -f $HOME/.asdf/asdf.sh ]; then
     . $HOME/.asdf/asdf.sh
 fi
 
+# mise
+if [ -f $HOME/bin/mise ]; then
+    eval "$($HOME/bin/mise activate zsh)"
+fi
+
 if [ -d $HOME/bin ]; then
     export PATH=$PATH:$HOME/bin
 fi

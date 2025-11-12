@@ -10,5 +10,6 @@ install()
 }
 
 install "asdf"
+install "mise"
 install "sheldon"
 install "venv"

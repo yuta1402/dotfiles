@@ -9,5 +9,6 @@ remove()
 }
 
 remove "asdf" "${HOME}/.asdf"
+remove "mise" "${HOME}/bin/mise"
 remove "sheldon" "${HOME}/bin/sheldon"
 remove "venv" "${HOME}/.venv"
