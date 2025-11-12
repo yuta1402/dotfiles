@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762917461154,
+  "lastUpdate": 1762932389359,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -2145,6 +2145,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time (Linux)",
             "value": 55.766138700000006,
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "3df1f1190a159225099a1f6fbc5c806a881f81db",
+          "message": "Add env.GITHUB_TOKEN to the step of installing dotfiles",
+          "timestamp": "2025-11-12T16:24:35+09:00",
+          "tree_id": "73ffa6d67d3b4edb8f518b8323c86488bb11ef1c",
+          "url": "https://github.com/yuta1402/dotfiles/commit/3df1f1190a159225099a1f6fbc5c806a881f81db"
+        },
+        "date": 1762932388662,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time (Linux)",
+            "value": 55.10082224,
             "unit": "millisecond"
           }
         ]
