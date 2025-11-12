@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762934874954,
+  "lastUpdate": 1762934876483,
   "repoUrl": "https://github.com/yuta1402/dotfiles",
   "entries": {
     "Zsh Benchmark": [
@@ -4409,6 +4409,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "nvim load time (macOS)",
             "value": 93.98651302,
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "committer": {
+            "email": "yuta1402souja@live.jp",
+            "name": "guts",
+            "username": "yuta1402"
+          },
+          "distinct": true,
+          "id": "b945cd26d9977bebfe65c5f1b2595a1216da897a",
+          "message": "Update neovim version to 0.11.5",
+          "timestamp": "2025-11-12T17:04:44+09:00",
+          "tree_id": "266f17a562aa2f3b6da6f06cc38b9f7944713985",
+          "url": "https://github.com/yuta1402/dotfiles/commit/b945cd26d9977bebfe65c5f1b2595a1216da897a"
+        },
+        "date": 1762934875869,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "nvim load time (macOS)",
+            "value": 93.58929162,
             "unit": "millisecond"
           }
         ]
